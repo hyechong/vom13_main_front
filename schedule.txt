@@ -1,0 +1,33 @@
+- 시스템 요구사항
+1. frontend와 backend 분리(MVC 패턴)
+2. database : endpoint 경로로 접근(API)
+3. method : post, get, patch, delete//
+4. endpoint : 확장자를 제외한 경로로만 작성(restAPI)//
+5. frontend : html, css, javascript(jquery)
+6. backend : php
+7. database : mariahDB
+8. hosting : cafe24 또는 dothome
+
+- 기능 요구사항
+1. 회원가입
+2. 로그인, 로그아웃
+3. 상품입력 관리자
+4. 회원정보 관리자
+5. 상품평 입력 및 수정
+7. 장바구니 기능
+8. 상품 더보기 기능
+9. 상세페이지
+10. 서브페이지 작성
+11. 별점 평가
+12. 댓글 기능//
+13. 게시판//
+
+- 오류 사항 보고
+
+- 결과 보고
+1. 주요 페이지 프로토타입
+2. 메인 페이지 디자인(Figma)
+3. endpoint 리스트
+4. data flow chart(endpoint 별)
+5. 테스트 보고서
+

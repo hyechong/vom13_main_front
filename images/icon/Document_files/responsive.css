@@ -1,0 +1,7 @@
+@media screen and (max-width:980px){
+
+  header{background:#fff; border-bottom:1px solid var(--color-gray-d);}
+  header .container{grid-template-columns: 1fr 1fr;}
+  header .container > *{display:none;}
+
+}

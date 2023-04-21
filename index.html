@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +9,94 @@
   <link rel="shortcut icon" href="/baexang_front/images/icon/favicon.ico">
   <title>백상 갤러리</title>
 
+  <!-- Swiper Plugin Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+
+  <!-- Reset CSS -->
+  <link rel="stylesheet" href="/baexang_front/css/reset.css">
+  <!-- Common CSS -->
+  <link rel="stylesheet" href="/baexang_front/css/common.css">
   <!-- Main CSS -->
   <link rel="stylesheet" href="/baexang_front/css/main.css">
+  <!-- Animation CSS -->
+  <link rel="stylesheet" href="/baexang_front/css/animation.css">
 </head>
 <body>
+  <div class="wrapper">
+    <!-- Header -->
+    <header>
+      <div class="navi">
+        <ul>
+          <li><a href="#"><img src="/baexang_front/images/icon/ico-header-menu.png" alt="menu icon"></a></li>
+          <li><a href="#">베스트</a></li>
+          <li><a href="#">신상품</a></li>
+          <li><a href="#">사진작품</a></li>
+          <li><a href="#">그림작품</a></li>
+        </ul>
+      </div>
+      <div class="logo">
+        <img src="/baexang_front/images/logo.png" alt="Baexang">
+      </div>
+      <div class="info">
+        <ul>
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">장바구니<em>0</em></a></li>
+          <li><a href="#">고객센터</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Main Contents Wrapper -->
+    <main id="contents">
+      <!-- Slider Landing Section -->
+      <section class="landing">
+        <div class="landing-slider">
+          <!-- Additional required wrapper -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="bg-wrap">
+                <div class="slide-txt">
+                  <p> art & design</p>
+                  <span>baexang gallery shop<br>grand open</span>
+                </div>
+                <div class="bg" style="background-image: url('/baexang_front/images/main_slider/main_slider1.jpg');"></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="bg-wrap">
+                <div class="slide-txt">
+                  <p> baexang gallery</p>
+                  <span>grand open</span>
+                </div>
+                <div class="bg" style="background-image: url('/baexang_front/images/main_slider/main_slider2.jpg');"></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="bg-wrap">
+                <div class="slide-txt">
+                  <p> art & design in</p>
+                  <span>baexang</span>
+                </div>
+                <div class="bg" style="background-image: url('/baexang_front/images/main_slider/main_slider3.jpg');"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </div>
   
+  <!-- JQuery CDN Link -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+
+  <!-- Custom jQuery -->
+  <script src="/baexang_front/js/ui/customjq.js"></script>
   <!-- Custom Javascript -->
   <script src="/baexang_front/js/ui/customjs.js"></script>
 </body>

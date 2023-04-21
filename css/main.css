@@ -1,0 +1,31 @@
+/* Header Style */
+header{display: flex; justify-content: space-between; padding: var(--el-medium) var(--el-main); align-items: center; position: fixed; background: #fff; width: 100%; z-index: 100; box-shadow: 1px 1px 5px #efefef; transition: all .4s;} 
+header .logo{width: 7.8125rem;}
+header .logo img{width: 100%;}
+header ul{display: flex; align-items: center; column-gap: var(--el-wide);}
+
+/* Main Contents Wrapper */
+#contents{width: 100%; height: auto;}
+
+/* Slider CSS */
+.landing{height: 100vh;}
+.landing .landing-slider{overflow: hidden; position: relative; height: 100%;}
+.landing .swiper-slide{height: 100%; position: relative; overflow: hidden;}
+
+
+.landing .bg-wrap{position: absolute;width: 100%; height: 100%; left: 0; top: 0; display: flex; align-items: center;}
+.landing .bg-wrap .bg{width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover; background-position: center center; position: absolute; left: 0; top: 0; transform: scale(1.1);}
+
+.landing .swiper-slide.swiper-slide-active .bg{animation: scale-down 4s 1; animation-delay: .5s; animation-fill-mode: forwards;}
+
+.landing .slide-txt{position: relative; z-index: 10; color: #fff; padding: 0 var(--el-main);}
+.landing .slide-txt p{font-size: 1.5rem; font-family: var(--ff-en); line-height: var(--el-wide); margin-bottom: var(--el-medium); text-transform: uppercase; transform: translateY(40px); opacity: 0; }
+.landing .slide-txt span{font-size: 3.75rem; font-weight: 600; text-transform: uppercase; font-family: var(--ff-en); line-height: 4.5rem; display: block; transform: translateY(40px); opacity: 0; }
+
+.landing .swiper-slide.swiper-slide-active .slide-txt p{animation: slide-up 1s 1; animation-fill-mode: forwards; animation-delay: .8s;}
+.landing .swiper-slide.swiper-slide-active .slide-txt span{animation: slide-up 1s 1; animation-fill-mode: forwards; animation-delay: 1.2s;}
+
+.landing .landing-slider.load-init .swiper-slide.swiper-slide-active .slide-txt p{animation-delay: .2s;}
+.landing .landing-slider.load-init .swiper-slide.swiper-slide-active .slide-txt span{animation-delay: .6s;}
+
+.landing .swiper-pagination{position: absolute; bottom: 0; display: flex; justify-content: flex-end;}

@@ -1,1 +1,11 @@
 .wrapper{width: 100%; height: auto; background: #fff; overflow: hidden;}
+.section{padding: 6.25rem 0; width: 100%; height: auto;}
+.container{width: 100%; height: auto; padding-left: var(--el-main) ; padding-right: var(--el-main); max-width: 1600px; margin: auto;}
+
+
+/* Section Title Style */
+.title-wrapper{width: 100%; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+.title-wrapper .title-desc{font-family: var(--ff-kr-serif); color: var(--color-pt); font-size: 1.25rem; line-height: var(--el-medium); letter-spacing: 1px;}
+.title-wrapper .section-title{font-size: 3.125rem; letter-spacing: .2rem; font-weight: 500; font-family: var(--ff-en); position: relative; padding: 0 5rem;}
+.title-wrapper .section-title::before{content: ''; width: 10rem; height: 1px; background: var(--color-fs); position: absolute; right: 100%; top: 50%; transform: translateY(-50%);}
+.title-wrapper .section-title::after{content: ''; width: 10rem; height: 1px; background: var(--color-fs); position: absolute; left: 100%; top: 50%; transform: translateY(-50%);}

@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap');
 
 /* Main Root Style */
 :root{
   /* Font Family */
-  --ff-kr: 'Noto Sans KR', sans-serif;
+  --ff-kr-sans: 'Noto Sans KR', sans-serif;
+  --ff-kr-serif: 'Noto Serif KR', serif;
   --ff-en: 'EB Garamond', serif;
 
   /* Color */
@@ -18,7 +19,7 @@
 
 /* Reset CSS */
 html{scroll-behavior: smooth;}
-body{font-family: var(--ff-kr);}
+body{font-family: var(--ff-kr-sans); height: 3000px;}
 *{margin: 0; padding: 0; box-sizing: border-box;}
 ol, ul{list-style: none;}
 a{text-decoration: none; color: #333;}

@@ -38,9 +38,33 @@ header ul{display: flex; align-items: center; column-gap: var(--el-wide);}
 .landing .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active em{color: var(--color-fs);}
 
 /* Best Items Style */
-.best-art .best-image-wrapper{padding: 7.5rem 0; position: relative; overflow: hidden;}
+.best-art .best-image-wrapper{padding: var(--el-cont) 0; position: relative; overflow: hidden;}
 .best-art .swiper-slide{width: 25%; _padding: 1rem;}
 .best-art .swiper-slide .best-image{width: 100%; height: 450px; overflow: hidden; display: flex; align-items: center; justify-content: center; position: relative;}
 .best-art .swiper-slide .best-image img{_width: 100%; height: 100%;}
 
-.best-art .swiper-slide .view-more-box{position: absolute; top: 0; left: 0;}
+.best-art .swiper-slide .view-more-box{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-30%) rotateY(180deg); background: rgba(255,255,255,.8); width: 80%; height: 80%; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all .4s; transition-delay: .1s;}
+.best-art .swiper-slide .best-image:hover .view-more-box{opacity: 1; visibility: visible; transform: translate(-50%,-50%) rotateY(0);}
+
+.swiper-pagination-bullet{background: #444;}
+.swiper-pagination-bullet-active{background: #333;}
+
+.best-art .best-info{width: 100%; height: auto; padding: var(--el-medium) 0; display: flex; flex-direction: column;}
+.best-art .best-info .item-title{font-family: var(--ff-kr-serif); font-size: 1.5rem; font-weight: 600; line-height: 1.875rem; }
+.best-art .best-info .item-by{font-family: var(--ff-kr-serif); color: var(--color-pt); margin-top: var(--el-small); line-height: 1.8rem;}
+.best-art .best-info .item-size{color: #999; margin-bottom: var(--el-small);}
+.best-art .best-info .item-price{font-size: 1.8rem; font-weight: 600; font-family: var(--ff-kr-serif); color: #333;}
+.best-art .best-info .item-price span{font-size: 1.25rem; font-weight: 400; font-family: var(--ff-kr-serif);}
+
+/* MD Pick Section Style */
+.pick-art{background: url('/baexang_front/images/pick-bg.jpeg') no-repeat center center; background-size: cover;}
+.pick-art .pick-tab-wrapper{width: 100%; height: auto; padding: 0 6.25rem;}
+.pick-art .pick-tab-btns{width: 100%; height: auto; margin: 3.125rem 0; display: flex; justify-content: center; column-gap: 1.125rem;}
+.pick-art .pick-tab-btn{font-size: 1.125rem; color: #999;}
+.pick-art .pick-tab-btn.on{color: #333;}
+.pick-art .pick-tab-btn:first-child{padding-right: 1.125rem; position: relative;}
+.pick-art .pick-tab-btn:first-child::after{content: ''; position: absolute; width: 1px; height: 12px; right: 0; top: 50%; transform: translateY(-50%); background: #dddd;}
+.pick-art .pick-tab-panel{display: none;}
+.pick-art .pick-tab-panel.on{display: block;}
+.pick-art .pick-tab-panel:nth-child(1){width: 100%; height: 100px; background: #ccc;}
+.pick-art .pick-tab-panel:nth-child(2){width: 100%; height: 100px; background: #aaa;}

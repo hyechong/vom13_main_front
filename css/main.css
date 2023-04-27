@@ -1,9 +1,28 @@
 /* Header Style */
 header{position: fixed; background: #fff; width: 100%; z-index: 100; box-shadow: 1px 1px 5px #efefef; transition: all .4s;} 
 header .container{display: flex; justify-content: space-between; align-items: center; padding-top: var(--el-medium); padding-bottom: var(--el-medium);}
+header.top .container{padding: var(--el-medium) var(--el-main); max-width: none; transition: all .3s;}
 header .logo{width: 7.8125rem;}
 header .logo img{width: 100%;}
 header ul{display: flex; align-items: center; column-gap: var(--el-wide);}
+li.menu-icon{display: none;}
+header ul li a{color: #666;}
+header ul li a:hover{color: #111;}
+
+/* Mobile Menu Style */
+.mobile-overlay{position: fixed; top: 0; left: 0; background: rgba(0,0,0,0.8); z-index: 9999; width: 100%; height: 100vh; transition: all .8s; opacity: 0; visibility: hidden;}
+.mobile-menus{position: absolute; left: -40%; top: 0; width: 40%; height: 100vh; background: #fff; padding: 1.5rem; transition: all .4s;}
+.mobile-overlay.on{opacity: 1; visibility: visible;}
+.mobile-menus.on{left: 0;}
+
+.mobile-menus .menu-top{display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.5rem; border-bottom: 1px solid #ddd;}
+.mobile-menus .menu-top .logo-icon img{width: 6.25rem;}
+.mobile-menus .navi, 
+.mobile-menus .info{padding: 1.25rem 0; border-bottom: 1px solid #ddd;}
+.mobile-menus .navi ul, 
+.mobile-menus .info ul{display: flex; flex-direction: column; row-gap: 1.25rem;}
+.mobile-menus ul li a{font-family: var(--ff-kr-serif); font-size: 1.25rem; font-weight: 500; transition: all .4s; color: #333;}
+.mobile-menus ul li a:hover{color: var(--color-pt);}
 
 /* Main Contents Wrapper */
 #contents{width: 100%; height: auto;}
@@ -64,7 +83,28 @@ header ul{display: flex; align-items: center; column-gap: var(--el-wide);}
 .pick-art .pick-tab-btn.on{color: #333;}
 .pick-art .pick-tab-btn:first-child{padding-right: 1.125rem; position: relative;}
 .pick-art .pick-tab-btn:first-child::after{content: ''; position: absolute; width: 1px; height: 12px; right: 0; top: 50%; transform: translateY(-50%); background: #dddd;}
+
+.pick-art .pick-tab-panels{width: 100%; height: auto; position: relative; padding-top: 3.75rem;}
 .pick-art .pick-tab-panel{display: none;}
 .pick-art .pick-tab-panel.on{display: block;}
-.pick-art .pick-tab-panel:nth-child(1){width: 100%; height: 100px; background: #ccc;}
-.pick-art .pick-tab-panel:nth-child(2){width: 100%; height: 100px; background: #aaa;}
+.pick-art .pick-tab-panel .panel-img{width: 45%; height: 50vh; overflow: hidden; display: flex; align-items: center; justify-content: center; z-index: 10; position: relative;}
+.pick-art .pick-tab-panel .panel-img img{width: 100%;}
+.pick-art .pick-tab-panel .panel-desc{position: absolute; top: 0; right: 0; width: 95%; background: #fff; box-shadow: 1px 3px 13px #ddd; display: flex; justify-content: flex-end;}
+.pick-art .pick-tab-panel .panel-txt{width: 50%; display: flex; flex-direction: column;justify-content: center; padding-right: 2.5rem;}
+.pick-art .pick-tab-panel .panel-txt p{line-height: 1.625rem; color: var(--color-pt); font-size: 1rem; letter-spacing: - var(--el-small); font-family: var(--ff-kr-serif); padding-bottom: var(--el-small); opacity: 0; transform: translateY(40);}
+.pick-art .pick-tab-panel .panel-txt h3{font-weight: 700; line-height: 2.875rem; font-size: 2.25rem; font-family: var(--ff-kr-serif); color: #333; opacity: 0;transform: translateY(40);}
+.pick-art .pick-tab-panel .panel-txt em{margin: 1.875rem 0; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 3; -webkit-box-orient: vertical; word-break: keep-all; overflow: hidden; font-size: 1rem; color: #666; line-height: 1.625rem; opacity: 0;transform: translateY(40);}
+.pick-art .pick-tab-panel .panel-txt .more-btn{opacity: 0;transform: translateY(40);}
+
+/* display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 3(세줄까지만 보여주고 그 뒤로 말줄임표 붙음); -webkit-box-orient: vertical; word-break: keep-all; overflow: hidden; : 말 줄이기 세트 */
+
+.pick-art .pick-tab-panel.on .panel-txt p,
+.pick-art .pick-tab-panel.on .panel-txt h3{animation: slide-up 1s 1; animation-fill-mode: forwards; animation-delay: .2s;}
+
+.pick-art .pick-tab-panel.on .panel-txt em{animation: slide-up 1s 1; animation-fill-mode: forwards; animation-delay: .6s;}
+
+.pick-art .pick-tab-panel.on .panel-txt .more-btn{animation: slide-up 1s 1; animation-fill-mode: forwards; animation-delay: 1s;}
+
+.pick-art .pick-tab-panel.on .panel-img,
+.pick-art .pick-tab-panel.on .panel-desc{animation: fade-in 1s 1; animation-fill-mode: forwards;}
+

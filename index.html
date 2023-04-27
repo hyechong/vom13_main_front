@@ -17,20 +17,22 @@
   <link rel="stylesheet" href="/baexang_front/css/reset.css?ver=20230426">
   <!-- Common CSS -->
   <link rel="stylesheet" href="/baexang_front/css/common.css?ver=20230426">
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="/baexang_front/css/main.css?ver=20230426">
   <!-- Animation CSS -->
   <link rel="stylesheet" href="/baexang_front/css/animation.css?ver=20230426">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="/baexang_front/css/main.css?ver=20230426">
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="/baexang_front/css/responsive.css?ver=20230426">
 </head>
 <body>
   <div class="wrapper">
   
     <!-- Header -->
-    <header>
+    <header class="top">
       <div class="container">
         <div class="navi">
           <ul>
-            <li><a href="#"><img src="/baexang_front/images/icon/ico-header-menu.png" alt="menu icon"></a></li>
+            <li class="menu-icon"><a href="#"><img src="/baexang_front/images/icon/ico-header-menu.png" alt="menu icon"></a></li>
             <li><a href="#">베스트</a></li>
             <li><a href="#">신상품</a></li>
             <li><a href="#">사진작품</a></li>
@@ -50,6 +52,33 @@
         </div>
       </div>
     </header>
+
+    <!-- Mobile Menu Section -->
+    <div class="mobile-overlay">
+      <div class="mobile-menus">
+        <div class="menu-top">
+          <a href="#" class="logo-icon"><img src="/baexang_front/images/logo.png" alt=""></a>
+          <a href="#" class="close-icon"><img src="/baexang_front/images/icon/ico-sitemap-close.png" alt=""></a>
+        </div>
+        <div class="navi">
+          <ul>
+            <li class="menu-icon"><a href="#"><img src="/baexang_front/images/icon/ico-header-menu.png" alt="menu icon"></a></li>
+            <li><a href="#">베스트</a></li>
+            <li><a href="#">신상품</a></li>
+            <li><a href="#">사진작품</a></li>
+            <li><a href="#">그림작품</a></li>
+          </ul>
+        </div>
+        <div class="info">
+          <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">장바구니<em>0</em></a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <!-- Main Contents Wrapper -->
     <main id="contents">
@@ -235,9 +264,47 @@
                 <button class="pick-tab-btn on">그림작품</button>
                 <button class="pick-tab-btn">사진작품</button>
               </div>
-              <div class="pick-tab-panels">
-                <div class="pick-tab-panel on"></div>
-                <div class="pick-tab-panel"></div>
+              <div class="pick-tab-panels" data-aos="fade-up" data-aos-delay="600" data-aos-once="true">
+                <div class="pick-tab-panel on">
+                  <div class="panel-img">
+                    <img src="/baexang_front/images/item_images/md-pick-1.png" alt="">
+                  </div>
+                  <div class="panel-desc">
+                    <div class="panel-txt">
+                      <p>구스타프  클림트</p>
+                      <h3>산지기의 집</h3>
+                      <em>구스타프 클림트의 산지기의 집(House in the garden)입니다. 구스타프 클림트는 오스트리아의 화가. 아르누보 계열의 장식적인 양식을 선호하며 전통적인 미술에 대항해 ‘빈 분리파’를 결성했다.   관능적인 여성 이미지와 찬란한 황금빛, 화려한 색채를 특징으로 하고 성(性)과 사랑, 죽음에 대한 알레고리로 많은 사람들을 매혹시켰다.</em>
+                      <div class="more-btn">
+                        <a href="#">
+                          <svg height="45" width="160">
+                            <rect height="45" width="160"/>
+                          </svg>
+                          <span>View More</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pick-tab-panel">
+                  <div class="panel-img">
+                    <img src="/baexang_front/images/item_images/md-pick-2.jpeg" alt="">
+                  </div>
+                  <div class="panel-desc">
+                    <div class="panel-txt">
+                      <p>빈센트 반 고흐</p>
+                      <h3>수확하는 사람</h3>
+                      <em>빈센트 반 고흐는 장 프랑수아 밀레(Jean Francois Millet)의 &lt;씨 뿌리는 사람&gt;(1850) 및 &lt;이삭 줍는 여인들-이삭줍기&gt;(1857)와 같은 작품들에서 영감을 받아 농촌에서 행해지는 일들에 관심이 많았고, 그와 관련한 다수의 연작들을 그렸다. 들에서 수확을 하고 있는 농부의 모습과 더불어 수확기의 황금빛 밀밭의 색채가 내는 효과가 보는 이의 시선을 사로잡는다.</em>
+                      <div class="more-btn">
+                        <a href="#">
+                          <svg height="45" width="160">
+                            <rect height="45" width="160"/>
+                          </svg>
+                          <span>View More</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

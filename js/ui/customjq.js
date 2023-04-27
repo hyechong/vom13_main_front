@@ -73,4 +73,36 @@ $(function () {
     });
   }
   visualSlider();
+
+  /* -------- Fitting MD Pick Image Ratio -------- */
+
+  function fitImageRatio(el1, el2, elv1, elv2) {
+    const mdImageWidth = $(el1).width();
+    const panelWidth = $(el2).width();
+    $(el1).height(mdImageWidth * elv1);
+    $(el2).height(panelWidth * elv2);
+  }
+  $(window).on('resize', function () {
+    fitImageRatio(
+      '.pick-tab-panel.on .panel-img',
+      '.pick-tab-panel.on .panel-desc',
+      0.8,
+      0.4
+    );
+  }); // 화면 줄이거나 늘릴때 실행
+  fitImageRatio(
+    '.pick-tab-panel.on .panel-img',
+    '.pick-tab-panel.on .panel-desc',
+    0.8,
+    0.4
+  ); // 처음 갱신했을때 실행
+
+  $('.pick-tab-btn').on('click', function () {
+    fitImageRatio(
+      '.pick-tab-panel.on .panel-img',
+      '.pick-tab-panel.on .panel-desc',
+      0.8,
+      0.4
+    );
+  }); // tab 버튼 click할때 실행
 });

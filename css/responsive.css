@@ -1,0 +1,9 @@
+@media screen and (max-width:1400px) {
+  /* Common Style */
+  /* .container{padding-left: 1.25rem; padding-right: 1.25rem; padding-bottom: 1.25rem;} */
+
+  /* Header Style */
+  
+  header ul li{display: none;}
+  header ul li.menu-icon{display: block;}
+}

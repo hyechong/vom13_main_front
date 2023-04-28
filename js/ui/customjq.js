@@ -1,10 +1,11 @@
 $(function () {
   /* -- 헤더 높이만큼 패딩 적용 */
   const headerHeight = $('header').outerHeight();
-  $('.landing').css(
-    'padding',
-    `${headerHeight}px var(--el-main) var(--el-main)`
-  );
+  $('.landing').css('padding-top', `${headerHeight}px`);
+  $(window).on('resize', function () {
+    const headerHeight = $('header').outerHeight();
+    $('.landing').css('padding-top', `${headerHeight}px`);
+  });
 
   /* Main Landing Slider */
   /*===== VISUAL SLIDER FUNCTION ===== */

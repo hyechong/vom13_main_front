@@ -1,9 +1,86 @@
 @media screen and (max-width:1400px) {
-  /* Common Style */
-  /* .container{padding-left: 1.25rem; padding-right: 1.25rem; padding-bottom: 1.25rem;} */
-
   /* Header Style */
   
   header ul li{display: none;}
   header ul li.menu-icon{display: block;}
+}
+
+@media screen and (max-width:1280px){
+  /* Change REM Size */
+  html, body{font-size: 14px;}
+
+  .container,
+  .landing .container{padding-left: 1.25rem; padding-right: 1.25rem; padding-bottom: 1.25rem;}
+  header.top .container{padding: 1.25rem;}
+
+  /* Main Landing Slider Section */
+  .landing .slide-txt p{font-size: 1.2rem; margin-bottom: var(--el-small);}
+  .landing .slide-txt span{font-size: 2.125rem; line-height: 2.5rem;}
+  .landing .swiper-pagination .swiper-pagination-bullet em{display: none;}
+  .landing .swiper-pagination .swiper-pagination-bullet span{font-size: 1.8rem; font-style: italic;}
+
+  /* Best Art Section */
+  .best-art .swiper-slide .view-more-box{width: 90%;}
+
+  /* Pick Art Section */
+  .pick-art .pick-tab-wrapper{padding: 0 3rem;}
+  .pick-art .pick-tab-panel .panel-txt{width: 55%; padding: 0 2rem;}
+  .pick-art .pick-tab-panel .panel-txt h3{font-size: 1.8rem;}
+  .pick-art .pick-tab-panel .panel-txt em{margin: 1.2rem 0; -webkit-line-clamp: 2;}
+}
+
+@media screen and (max-width:786px){
+  /* Common Style */
+  .section{padding: 3rem 0;}
+
+  /* Header Style */
+  .mobile-menus{width: 60%;}
+  header.top .container, header .container{padding-top:1.25rem; padding-bottom: 1.25rem;}
+  .landing .swiper-pagination .swiper-pagination-bullet span{font-size: 1.2rem;}
+
+  /* Best Art Section */
+  .best-art .best-image-wrapper{padding: 3.75rem 0;}
+  .title-wrapper .section-title{font-size: 2.25rem;}
+  .aos-animate .title-wrapper .section-title::before, .aos-animate .title-wrapper .section-title::after{display: none;}
+
+  /* Pick Art Section */
+  .pick-art .pick-tab-wrapper{padding: 0 1.5rem;}
+  .pick-art .pick-tab-btns{margin: 1.5rem 0;}
+  .pick-art .pick-tab-panels{padding: 0;}
+  .pick-art .pick-tab-panel .panel-img{width: 100%;}
+  .pick-art .pick-tab-panel .panel-desc{position: relative; width: 100%; height: auto !important; padding: 3rem 2rem;}
+  .pick-art .pick-tab-panel .panel-txt{width: 100%; padding: 0;}
+  .pick-art .pick-tab-panel .panel-txt em{-webkit-line-clamp: 3;}
+}
+
+@media screen and (max-width:480px){
+  /* Common Style */
+  .section{padding: 2rem 0;}
+
+  /* Header Style */
+  header.top .container, header .container{padding: 1rem 1.25rem;}
+  .mobile-menus{width: 80%;}
+  header .logo{width: 5.25rem;}
+  header .menu-icon img{width: 1.5rem;}
+
+  /* Main Landing Slider Section */
+  .landing .slide-txt{text-align: center; width: 100%;}
+  .landing .slide-txt p{font-size: 1rem; margin-bottom: var(--el-small);}
+  .landing .slide-txt span{font-size: 1.8rem; line-height: 1.8rem;}
+  .landing .swiper-pagination{width: 100%; justify-content: center;}
+  .landing .swiper-pagination .swiper-pagination-bullet{width: 36%; align-items: center; padding: 1rem 0;}
+  .landing .swiper-pagination .swiper-pagination-bullet:first-child{border-left: 1px solid #ededed;}
+  .landing .swiper-pagination .swiper-pagination-bullet span{font-size: 1rem;}
+
+  /* Best Art Section */
+  .title-wrapper .section-title{font-size: 1.6rem;}
+  .title-wrapper .title-desc{font-size: 1rem; letter-spacing: 0;}
+  .best-art .best-info .item-price{font-size: 1.6rem;}
+
+  /* Pick Art Section */
+  .pick-art .pick-tab-wrapper{padding: 0;}
+  .pick-art .pick-tab-panels{padding: 0;}
+  .pick-art .pick-tab-panel .panel-desc{padding: 2rem 1rem;}
+  .pick-art .pick-tab-panel .panel-txt{align-items: center;}
+  .pick-art .pick-tab-panel .panel-txt em{-webkit-line-clamp: 2; text-align: center;}
 }

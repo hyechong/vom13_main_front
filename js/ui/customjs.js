@@ -20,6 +20,38 @@ window.addEventListener('scroll', function () {
   }
 });
 
+/* -------- Mobile Menu Hide & Show -------- */
+const mobileMenuIcon = document.querySelector('.menu-icon');
+const mobileOverlay = document.querySelector('.mobile-overlay');
+const mobileCloseIcon = document.querySelector('.close-icon');
+
+mobileMenuIcon.addEventListener('click', function (e) {
+  e.preventDefault(); // 기본 기능 막아주는 함수 (여기서는 <a href="#"> a 누르면 화면 맨위로 기본 기능 막아줌)
+  mobileOverlay.classList.add('on');
+  document.body.style.overflow = 'hidden'; // 사이드 메뉴 활성화시 스크롤 멈춤
+});
+mobileCloseIcon.addEventListener('click', function (e) {
+  e.preventDefault();
+  mobileOverlay.classList.remove('on');
+  document.body.style.overflow = 'auto'; // 사이드 메뉴 닫으면 다시 스크롤 가능
+});
+
+// target, currentTarget
+mobileOverlay.addEventListener('click', function (e) {
+  e.preventDefault();
+  // console.log(e.target); // 클릭한 element 타겟팅
+  // console.log(e.currentTarget); // 최상위 element 타겟팅
+  if (
+    e.target.getAttribute('class') !== 'mobile-menus' &&
+    e.target.nodeName !== 'LI' &&
+    e.target.nodeName !== 'A' &&
+    e.target.nodeName !== 'IMG'
+  ) {
+    mobileOverlay.classList.remove('on');
+    document.body.style.overflow = 'auto';
+  }
+});
+
 /* -------- Best Items Slide -------- */
 const bestArtSwiper = new Swiper('.best-image-wrapper .swiper', {
   slidesPerView: 4,
@@ -29,6 +61,23 @@ const bestArtSwiper = new Swiper('.best-image-wrapper .swiper', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
+  },
+  breakpoints: {
+    480: {
+      // 480 이하
+      slidesPerView: 1, // 보이는 슬라이드 갯수
+      slidesPerGroup: 1, // 하나의 페이지네이션에 묶이는 슬라이드 갯수
+    },
+    880: {
+      // 880 이하
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    1400: {
+      // 1400 이하
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
   },
 });
 
@@ -55,4 +104,28 @@ btns.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
     activeTabs(idx);
   });
+});
+
+/* -------- New Art Slide -------- */
+const newArtSwiper = new Swiper('.new-art-slider-wrapper .swiper', {
+  slidesPerView: 3,
+  spaceBetween: 20,
+
+  // breakpoints: {
+  //   480: {
+  //     // 480 이하
+  //     slidesPerView: 1, // 보이는 슬라이드 갯수
+  //     slidesPerGroup: 1, // 하나의 페이지네이션에 묶이는 슬라이드 갯수
+  //   },
+  //   880: {
+  //     // 880 이하
+  //     slidesPerView: 2,
+  //     slidesPerGroup: 2,
+  //   },
+  //   1400: {
+  //     // 1400 이하
+  //     slidesPerView: 3,
+  //     slidesPerGroup: 3,
+  //   },
+  // },
 });

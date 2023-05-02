@@ -77,21 +77,21 @@ $(function () {
 
   /* -------- Fitting MD Pick Image Ratio -------- */
 
-  function fitImageRatio(el1, el2, elv1, elv2) {
+  function fit2ImageRatio(el1, el2, elv1, elv2) {
     const mdImageWidth = $(el1).width();
     const panelWidth = $(el2).width();
     $(el1).height(mdImageWidth * elv1);
     $(el2).height(panelWidth * elv2);
   }
   $(window).on('resize', function () {
-    fitImageRatio(
+    fit2ImageRatio(
       '.pick-tab-panel.on .panel-img',
       '.pick-tab-panel.on .panel-desc',
       0.8,
       0.4
     );
   }); // 화면 줄이거나 늘릴때 실행
-  fitImageRatio(
+  fit2ImageRatio(
     '.pick-tab-panel.on .panel-img',
     '.pick-tab-panel.on .panel-desc',
     0.8,
@@ -99,11 +99,24 @@ $(function () {
   ); // 처음 갱신했을때 실행
 
   $('.pick-tab-btn').on('click', function () {
-    fitImageRatio(
+    fit2ImageRatio(
       '.pick-tab-panel.on .panel-img',
       '.pick-tab-panel.on .panel-desc',
       0.8,
       0.4
     );
   }); // tab 버튼 click할때 실행
+
+  /* -------- Fitting New Art Image Ratio -------- */
+  function fit1ImageRatio(el1, elv1) {
+    const fitElmtWidth = $(el1).width();
+    $(el1).height(fitElmtWidth * elv1);
+  }
+
+  // const newArtWidth = $('.new-art-image').width();
+  // $('.new-art-image').height(newArtWidth * 1.4);
+  fit1ImageRatio('.new-art-image', 1.4);
+  $(window).on('resize', function () {
+    fit1ImageRatio('.new-art-image', 1.4);
+  });
 });

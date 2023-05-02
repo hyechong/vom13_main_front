@@ -27,11 +27,28 @@
   .pick-art .pick-tab-panel .panel-txt{width: 55%; padding: 0 2rem;}
   .pick-art .pick-tab-panel .panel-txt h3{font-size: 1.8rem;}
   .pick-art .pick-tab-panel .panel-txt em{margin: 1.2rem 0; -webkit-line-clamp: 2;}
+
+  /* New Art Section */
+  .new-art .new-art-text{height: 16vh;}
+  .new-art .new-art-text em{-webkit-line-clamp: 2;}
+  .new-art .new-art-title{width: 90%;}
+  .new-art .new-art-title h3{font-size: 1.2rem;}
+  .new-art .slider-nav-wrapper{display: none;}
 }
 
 @media screen and (max-width:786px){
   /* Common Style */
   .section{padding: 3rem 0;}
+
+  /* Common Content Box Padding */
+  .content-wrapper{padding: 3.75rem 0;}
+  
+  /* Common Button Style */
+  .more-btn a{width: 125px; height: 35px; font-size: .625rem;}
+  .more-btn a svg{width: 125px; height: 35px;}
+  .more-btn a svg rect{width: 125px; height: 35px; stroke-dasharray: 338% 32;
+  stroke-dashoffset: 250%;}
+  
 
   /* Header Style */
   .mobile-menus{width: 60%;}
@@ -39,7 +56,6 @@
   .landing .swiper-pagination .swiper-pagination-bullet span{font-size: 1.2rem;}
 
   /* Best Art Section */
-  .best-art .best-image-wrapper{padding: 3.75rem 0;}
   .title-wrapper .section-title{font-size: 2.25rem;}
   .aos-animate .title-wrapper .section-title::before, .aos-animate .title-wrapper .section-title::after{display: none;}
 
@@ -51,6 +67,10 @@
   .pick-art .pick-tab-panel .panel-desc{position: relative; width: 100%; height: auto !important; padding: 3rem 2rem;}
   .pick-art .pick-tab-panel .panel-txt{width: 100%; padding: 0;}
   .pick-art .pick-tab-panel .panel-txt em{-webkit-line-clamp: 3;}
+
+  /* New Art Section */
+  .new-art .new-art-text{height: 14vh;}
+  
 }
 
 @media screen and (max-width:480px){

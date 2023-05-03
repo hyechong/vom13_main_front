@@ -133,3 +133,15 @@ const newArtSwiper = new Swiper('.new-art-slider-wrapper .swiper', {
     },
   },
 });
+
+// Direct Gallery Text Effect
+const dgLetters = document.querySelectorAll('.direct-gallery-inside h2 span');
+// console.log(dgLetters);
+dgLetters.forEach((letter, i) => {
+  const delayIndex = i + 8;
+  if (delayIndex < 10) {
+    letter.style.animationDelay = `0.${delayIndex}s`;
+  } else {
+    letter.style.animationDelay = `${delayIndex / 10}s`;
+  }
+});

@@ -119,7 +119,7 @@ header ul li a:hover{color: #111;}
 .new-art .new-art-title p{font-size: 1rem; color: var(--color-pt);line-height: 1.625rem; letter-spacing: .047rem; margin-bottom: .625rem;}
 .new-art .new-art-title h3{font-size: 1.5rem; color: #333; line-height: 2.25rem; font-family: var(--ff-kr-serif);}
 
-.new-art .new-art-text{width: 100%; height: 20vh; display: flex; flex-direction: column; justify-content: space-between;}
+.new-art .new-art-text{width: 100%; height: 24vh; display: flex; flex-direction: column; justify-content: space-between;}
 .new-art .new-art-text em{font-size: 1rem; color: #666; line-height: 1.625rem; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; margin: 1.625rem 0; overflow: hidden;}
 
 .new-art .slider-nav-wrapper{position: absolute; width: 115%; height: auto; top: 45%; left: 50%; transform: translate(-50%,-50%); z-index: 10;}
@@ -139,3 +139,44 @@ header ul li a:hover{color: #111;}
 @media screen and (max-width:1680px) {
   .new-art .slider-nav-wrapper{width: 110%;}
 }
+
+/* Direct Gallery Style */
+.direct-gallery{padding: 0 var(--el-main);}
+.direct-gallery .container{width: 100%; height: auto; background: url(/baexang_front/images/gallery-bg.jpg) no-repeat center center; background-size: cover; padding: 9.375rem var(--el-main); max-width: none; background-attachment: fixed;}
+.direct-gallery .direct-gallery-inside{padding: 5rem 1.25rem; width: 100%; max-width: 1400px; margin: auto; background: rgba(255,255,255,.8); text-align: center;}
+.direct-gallery .direct-gallery-inside h2{font-size: 2.5rem; color: #333; font-weight: 700; font-family: var(--ff-en); display: flex; width: 100%; justify-content: center; column-gap: .5rem; flex-wrap: wrap;}
+.direct-gallery .direct-gallery-inside h2 span{opacity: 0; transform: rotateY(-90deg);}
+.direct-gallery .direct-gallery-inside.aos-animate h2 span{animation: textAni .8s 1; animation-fill-mode: forwards;}
+
+.direct-gallery .direct-gallery-inside p{font-size: 1.125rem; line-height: 1.75rem; color: #333; padding: 1.875rem 0; font-weight: 500; letter-spacing: -.5px; font-family: var(--ff-kr-serif);}
+.direct-gallery .direct-gallery-inside .more-btn{width: 100%; display: flex; justify-content: center;}
+
+/* Review Style */
+.review .container{padding-top: 4rem;}
+.review .review-image-wrapper{width: 100%; height: auto; display: flex; padding: 3rem 0; flex-wrap: wrap;}
+.review .review-image-content{width: 33.33%; padding: 1rem;}
+.review .review-image-content .review-image{width: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; object-fit: cover; position: relative;}
+.review .review-image-content .review-image img{width: 100%;}
+.review .review-image .label{position: absolute; background: #fff; color: var(--color-pt); right: 0; top: 0; z-index: 10; padding: 1rem; display: flex; flex-direction: column; align-items: center;}
+.review .review-image .label em{font-size: 1.5rem; font-weight: 700; font-family: var(--ff-kr-sans);}
+.review .review-image .label strong{font-size: .8rem; font-weight: 500; font-family: var(--ff-kr-sans); line-height: .5rem;}
+
+.review .review-text{padding: 1.5rem 0; display: flex; flex-direction: column;}
+.review .review-text p{font-size: 1rem; color: var(--color-pt); line-height: 1.125rem; font-family: var(--ff-kr-sans); display: flex;}
+.review .review-text p em{position: relative; padding-right: .5rem; margin-right: .5rem;}
+.review .review-text p em::after{content: ''; width: 1px; height: 70%; position: absolute; background: var(--color-pt); right: 0; top: 55%; transform: translateY(-50%);}
+.review .review-text .comment{margin: 1.5rem 0; overflow: hidden; font-size: 1rem; line-height: 1.625rem; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; font-family: var(--ff-kr-sans); color: #666;}
+
+/* Footer Style */
+.footer{width: 100%; height: auto; background: #272727; padding: 5rem 0;}
+.footer ul li,
+.footer ul li a{color: #888; font-size: 1rem; font-family: var(--ff-kr-sans);}
+.footer span{color: #888; font-size: 1rem; font-family: var(--ff-en);}
+.footer ul{width: 100%; height: auto; display: flex; margin-bottom: var(--el-small);}
+.footer ul li{position: relative; padding-right: .5rem; margin-right: .5rem;}
+.footer ul li:not(:last-child):after{position: absolute; content: ''; width: 1px; height: 50%; right: 0; top: 55%; transform: translateY(-50%); background: #666;}
+.footer ul li a{transition: all .4s;}
+.footer ul li a:hover{color: #ddd;}
+
+/* To Top Style */
+.to-top{position: fixed; right: 1.5rem; bottom: 1.5rem; width: 3.125rem; height: 3.125rem; background: var(--color-pt); display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 9999;}

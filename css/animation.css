@@ -17,3 +17,8 @@
   0%{opacity: 0;}
   100%{opacity: 1;}
 }
+
+@keyframes textAni{
+  0%{opacity: 0; transform: rotateY(-90deg);}
+  100%{opacity: 1; transform: rotateY(0);}
+}

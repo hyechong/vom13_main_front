@@ -29,11 +29,14 @@
   .pick-art .pick-tab-panel .panel-txt em{margin: 1.2rem 0; -webkit-line-clamp: 2;}
 
   /* New Art Section */
-  .new-art .new-art-text{height: 16vh;}
+  .new-art .new-art-text{height: 18vh;}
   .new-art .new-art-text em{-webkit-line-clamp: 2;}
   .new-art .new-art-title{width: 90%;}
   .new-art .new-art-title h3{font-size: 1.2rem;}
   .new-art .slider-nav-wrapper{display: none;}
+
+  /* Review Section */
+  .review .review-image-content{padding: .5rem;}
 }
 
 @media screen and (max-width:786px){
@@ -57,7 +60,7 @@
 
   /* Best Art Section */
   .title-wrapper .section-title{font-size: 2.25rem;}
-  .aos-animate .title-wrapper .section-title::before, .aos-animate .title-wrapper .section-title::after{display: none;}
+  .aos-animate .title-wrapper .section-title::before, .aos-animate .title-wrapper .section-title::after, .aos-animate.title-wrapper .section-title::before, .aos-animate.title-wrapper .section-title::after{display: none;}
 
   /* Pick Art Section */
   .pick-art .pick-tab-wrapper{padding: 0 1.5rem;}
@@ -69,8 +72,20 @@
   .pick-art .pick-tab-panel .panel-txt em{-webkit-line-clamp: 3;}
 
   /* New Art Section */
-  .new-art .new-art-text{height: 14vh;}
+  .new-art .new-art-text{height: 16vh;}
+
+  /* Direct Gallery Section */
+  .direct-gallery .direct-gallery-inside h2{font-size: 2rem;}
+  .direct-gallery .direct-gallery-inside p{padding: 1.125rem 0;}
   
+  /* Review Section */
+  .review .review-image-content{width: calc(50% - 1rem); box-shadow: 0 0 3px #ddd; margin: .5rem;}
+  .review .review-text p{font-size: .75rem;}
+  .review .review-text .comment{font-size: .75rem; margin: 1rem 0;}
+
+  /* Footer Style */
+  .footer ul.adr-tel{flex-direction: column; row-gap: var(--el-small);}
+  .footer ul.adr-tel li::after{opacity: 0;}
 }
 
 @media screen and (max-width:480px){
@@ -103,4 +118,20 @@
   .pick-art .pick-tab-panel .panel-desc{padding: 2rem 1rem;}
   .pick-art .pick-tab-panel .panel-txt{align-items: center;}
   .pick-art .pick-tab-panel .panel-txt em{-webkit-line-clamp: 2; text-align: center;}
+
+  /* Direct Gallery Section */
+  .direct-gallery .direct-gallery-inside h2{font-size: 1.8rem;}
+  .direct-gallery .direct-gallery-inside p{font-size: 1rem;}
+
+  /* Review Section */
+  .review .review-image-content{width: 100%;}
+  .review .review-image-wrapper{padding: 3rem 0 0;}
+  
+  /* Footer Style */
+  .footer{padding: 3rem 0;}
+  .footer ul li,
+  .footer ul li a,
+  .footer span{font-size: .75rem;}
+  .footer ul{margin-bottom: .5rem;}
+  .footer ul.adr-tel{row-gap: .5rem;}
 }

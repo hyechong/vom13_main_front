@@ -119,4 +119,24 @@ $(function () {
   $(window).on('resize', function () {
     fit1ImageRatio('.new-art-image', 1.4);
   });
+
+  /* -------- Fitting Review Image Ratio -------- */
+  fit1ImageRatio('.review-image', 0.8);
+  $(window).on('resize', function () {
+    fit1ImageRatio('.review-image', 0.8);
+  });
+
+  /* -------- To Top Button -------- */
+  $(window).on('scroll', function () {
+    const sct = $(window).scrollTop();
+    if (sct > 100) {
+      $('.to-top').css('display', 'flex');
+    } else {
+      $('.to-top').css('display', 'none');
+    }
+  });
+
+  $('.to-top').on('click', function () {
+    $('html,body').animate({ scrollTop: 0 }, 'fast');
+  });
 });

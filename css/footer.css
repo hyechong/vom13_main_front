@@ -1,0 +1,10 @@
+/* Footer Style */
+.footer{width: 100%; height: auto; background: #272727; padding: 5rem 0;}
+.footer ul li,
+.footer ul li a{color: #888; font-size: 1rem; font-family: var(--ff-kr-sans);}
+.footer span{color: #888; font-size: 1rem; font-family: var(--ff-en);}
+.footer ul{width: 100%; height: auto; display: flex; margin-bottom: var(--el-small);}
+.footer ul li{position: relative; padding-right: .5rem; margin-right: .5rem;}
+.footer ul li:not(:last-child):after{position: absolute; content: ''; width: 1px; height: 50%; right: 0; top: 55%; transform: translateY(-50%); background: #666;}
+.footer ul li a{transition: all .4s;}
+.footer ul li a:hover{color: #ddd;}

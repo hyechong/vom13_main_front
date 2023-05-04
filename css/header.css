@@ -1,0 +1,25 @@
+/* Header Style */
+header{position: fixed; background: #fff; width: 100%; z-index: 100; box-shadow: 1px 1px 5px #efefef; transition: all .4s;} 
+header .container{display: flex; justify-content: space-between; align-items: center; padding-top: var(--el-medium); padding-bottom: var(--el-medium);}
+header.top .container{padding: var(--el-medium) var(--el-main); max-width: none; transition: all .3s;}
+header .logo{width: 7.8125rem;}
+header .logo img{width: 100%;}
+header ul{display: flex; align-items: center; column-gap: var(--el-wide);}
+li.menu-icon{display: none;}
+header ul li a{color: #666;}
+header ul li a:hover{color: #111;}
+
+/* Mobile Menu Style */
+.mobile-overlay{position: fixed; top: 0; left: 0; background: rgba(0,0,0,0.8); z-index: 9999; width: 100%; height: 100vh; transition: all .8s; opacity: 0; visibility: hidden;}
+.mobile-menus{position: absolute; left: -40%; top: 0; width: 40%; height: 100vh; background: #fff; padding: 1.5rem; transition: all .4s;}
+.mobile-overlay.on{opacity: 1; visibility: visible;}
+.mobile-overlay.on .mobile-menus{left: 0; transition-delay: .3s;}
+
+.mobile-menus .menu-top{display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.5rem; border-bottom: 1px solid #ddd;}
+.mobile-menus .menu-top .logo-icon img{width: 6.25rem;}
+.mobile-menus .navi, 
+.mobile-menus .info{padding: 1.25rem 0; border-bottom: 1px solid #ddd;}
+.mobile-menus .navi ul, 
+.mobile-menus .info ul{display: flex; flex-direction: column; row-gap: 1.25rem;}
+.mobile-menus ul li a{font-family: var(--ff-kr-serif); font-size: 1.25rem; font-weight: 500; transition: all .4s; color: #333;}
+.mobile-menus ul li a:hover{color: var(--color-pt);}

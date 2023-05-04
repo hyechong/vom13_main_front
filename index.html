@@ -12,73 +12,15 @@
   <!-- Plugin CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <!-- Reset CSS -->
-  <link rel="stylesheet" href="/baexang_front/css/reset.css?ver=20230426">
-  <!-- Common CSS -->
-  <link rel="stylesheet" href="/baexang_front/css/common.css?ver=20230426">
-  <!-- Animation CSS -->
-  <link rel="stylesheet" href="/baexang_front/css/animation.css?ver=20230426">
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="/baexang_front/css/main.css?ver=20230426">
-  <!-- Responsive CSS -->
-  <link rel="stylesheet" href="/baexang_front/css/responsive.css?ver=20230426">
 </head>
 <body>
   <div class="wrapper">
   
     <!-- Header -->
-    <header class="top">
-      <div class="container">
-        <div class="navi">
-          <ul>
-            <li class="menu-icon"><a href="#"><img src="/baexang_front/images/icon/ico-header-menu.png" alt="menu icon"></a></li>
-            <li><a href="#">베스트</a></li>
-            <li><a href="#">신상품</a></li>
-            <li><a href="#">사진작품</a></li>
-            <li><a href="#">그림작품</a></li>
-          </ul>
-        </div>
-        <div class="logo">
-          <img src="/baexang_front/images/logo.png" alt="Baexang">
-        </div>
-        <div class="info">
-          <ul>
-            <li><a href="#">로그인</a></li>
-            <li><a href="#">회원가입</a></li>
-            <li><a href="#">장바구니<em>0</em></a></li>
-            <li><a href="#">고객센터</a></li>
-          </ul>
-        </div>
-      </div>
-    </header>
+    <div id="header-wrapper"></div>
 
     <!-- Mobile Menu Section -->
-    <div class="mobile-overlay">
-      <div class="mobile-menus">
-        <div class="menu-top">
-          <a href="#" class="logo-icon"><img src="/baexang_front/images/logo.png" alt=""></a>
-          <a href="#" class="close-icon"><img src="/baexang_front/images/icon/ico-sitemap-close.png" alt=""></a>
-        </div>
-        <div class="navi">
-          <ul>
-            <li class="menu-icon"><a href="#"><img src="/baexang_front/images/icon/ico-header-menu.png" alt="menu icon"></a></li>
-            <li><a href="#">베스트</a></li>
-            <li><a href="#">신상품</a></li>
-            <li><a href="#">사진작품</a></li>
-            <li><a href="#">그림작품</a></li>
-          </ul>
-        </div>
-        <div class="info">
-          <ul>
-            <li><a href="#">로그인</a></li>
-            <li><a href="#">회원가입</a></li>
-            <li><a href="#">장바구니<em>0</em></a></li>
-            <li><a href="#">고객센터</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <div id="mobile-overlay-wrapper"></div>
 
     <!-- Main Contents Wrapper -->
     <main id="contents">
@@ -477,7 +419,7 @@
             <p class="title-desc">백상 작품의 후기를 확인하세요.</p>
             <h2 class="section-title">REVIEW</h2>
           </div>
-          <div class="review-image-wrapper">
+          <div class="review-image-wrapper" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
             <div class="review-image-content">
               <div class="review-image">
                 <span class="label"><em>02</em><strong>JUN</strong></span>
@@ -545,32 +487,22 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-wrapper">
-          <ul>
-            <li><a href="#">개인정보처리방침</a></li>
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">회사소개</a></li>
-          </ul>
-          <ul>
-            <li>대표자 : 차토토</li>
-            <li>사업자등록번호 : 123-45-67891</li>
-          </ul>
-          <ul class="adr-tel">
-            <li>주소 : 영국도 미국시 중국구 베트남로 123-1</li>
-            <li> EMAIL : admin@gmail.com</li>
-            <li>TEL : 031-123-4567</li>
-            <li>FAX : 031-987-6543</li>
-          </ul>
-          <span class="copy">Copyright &copy; 2023 Baexang Gallery. All right reserved.</span>
-        </div>
-      </div>
-    </footer>
+
+    <!-- Footer Section -->
+    <div id="footer-wrapper"></div>
+
+    <!-- To Top Button -->
     <div class="to-top">
       <img src="/baexang_front/images/icon/ico-go-top.png" alt="맨위로 버튼">
     </div>
   </div>
+
+  <script>
+    const url = document.location.href;
+    if(url==='http://localhost/baexang_front/'){
+      location.href = 'http://localhost/baexang_front/index.html'
+    }
+  </script>
   
   <!-- JQuery CDN Link -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
@@ -579,14 +511,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <!-- Custom jQuery -->
-  <script src="/baexang_front/js/ui/customjq.js?ver=20230426"></script>
-  <!-- Custom Javascript -->
-  <script src="/baexang_front/js/ui/customjs.js?ver=20230426"></script>
-  <script>
-    AOS.init({
-      duration:1000
-    });
-  </script>
+  <script src="/baexang_front/js/etc/head-contents.js"></script>
+
 </body>
 </html>

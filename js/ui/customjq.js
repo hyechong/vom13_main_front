@@ -73,7 +73,10 @@ $(function () {
       $('.landing-slider').removeClass('load-init');
     });
   }
-  visualSlider();
+  const isSwiper = $('.swiper-wrapper');
+  if (isSwiper.length > 0) {
+    visualSlider();
+  }
 
   /* -------- Fitting MD Pick Image Ratio -------- */
 

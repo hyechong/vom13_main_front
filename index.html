@@ -12,10 +12,14 @@
   <!-- Plugin CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    .preloader{position: fixed; background: #fff; width: 100%; height: 100vh; left: 0; top: 0; z-index: 9999; display: flex; align-items: center; justify-content: center;}
+    .preloader img{width: 20%;} 
+  </style>
 </head>
 <body>
   <div class="wrapper">
-  
     <!-- Header -->
     <div id="header-wrapper"></div>
 
@@ -497,6 +501,10 @@
     </div>
   </div>
 
+  <div class="preloader js-preloader">
+    <img src="/baexang_front/images/loader.gif" alt="">
+  </div>
+
   <script>
     const url = document.location.href;
     if(url==='http://localhost/baexang_front/'){
@@ -510,6 +518,7 @@
   <!-- Plugin -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="/baexang_front/js/etc/jquery.preloadinator.min.js"></script>
 
   <script src="/baexang_front/js/etc/head-contents.js"></script>
 

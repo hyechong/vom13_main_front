@@ -37,6 +37,9 @@
 
   /* Review Section */
   .review .review-image-content{padding: .5rem;}
+
+  /* Sign-up Style */
+  .sign .form-wrapper{width: 65vw;}
 }
 
 @media screen and (max-width:786px){
@@ -86,6 +89,9 @@
   /* Footer Style */
   .footer ul.adr-tel{flex-direction: column; row-gap: var(--el-small);}
   .footer ul.adr-tel li::after{opacity: 0;}
+
+  /* Sign-up Style */
+  .sign .form-wrapper{width: 90vw;}
 }
 
 @media screen and (max-width:480px){
@@ -134,4 +140,13 @@
   .footer span{font-size: .75rem;}
   .footer ul{margin-bottom: .5rem;}
   .footer ul.adr-tel{row-gap: .5rem;}
+
+  /* Sign-up Style */
+  .sign .form-wrapper{width: 100%; margin: 2rem auto 0;}
+  .sign .form-wrapper input{padding: 1.2rem;}
+  .sign .form-wrapper input::placeholder{font-size: .75rem;}
+  .sign .form-wrapper form input[type='submit']{font-size: .75rem;}
+  .sign .form-wrapper .sign-msg em,
+  .sign .form-wrapper .sign-msg a{font-size: .75rem;}
+  .sign .form-wrapper .sign-msg a{padding: .75rem 1.8rem;}
 }

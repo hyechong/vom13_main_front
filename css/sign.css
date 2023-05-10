@@ -1,0 +1,18 @@
+.sign header{position: fixed;}
+.sign .sign-form .container{padding-top: var(--el-main);}
+
+.sign .form-wrapper{width: 50vw; margin: 3rem auto 0; border: 1px solid var(--color-pt); padding: 1rem 1rem 0;}
+/* .sign .form-wrapper h3{font-size: 1.25rem; font-family: var(--ff-kr-sans); line-height: 1.875rem; color: var(--color-pt); margin-bottom: 1.875rem; text-align: center;} */
+.sign .form-wrapper form{display: flex; flex-direction: column; row-gap: .5rem;}
+.sign .form-wrapper form p {width: 100%; height: auto;}
+.sign .form-wrapper form input{width: 100%; height: auto; padding: 1rem 1.5rem; font-size: 1rem; background: #f8f8f8;}
+.sign .form-wrapper form input[type='submit']{background: var(--color-pt); color: #fff; font-size: 1.25rem; font-weight: 500; transition: all .4s; border: 1px solid var(--color-pt);}
+.sign .form-wrapper form input[type='submit']:hover{background: #fff; color: var(--color-pt);}
+.sign .form-wrapper form input:focus{border: 1px solid var(--color-pt); background: #fff;}
+.sign .form-wrapper form input::placeholder{color: #ccc;}
+
+.sign .form-wrapper .sign-msg{padding: 1rem 0; display: flex; justify-content: center; border-top: 1px solid var(--color-pt); margin-top: .5rem; align-items: center; column-gap: .5rem;}
+.sign .form-wrapper .sign-msg em,
+.sign .form-wrapper .sign-msg a{font-size: 1rem; color: #aaa; font-weight: 500; font-family: var(--ff-kr-sans);}
+.sign .form-wrapper .sign-msg a{padding: .75rem 2.5rem; border: 1px solid var(--color-pt); color: var(--color-pt); transition: all .4s;}
+.sign .form-wrapper .sign-msg a:hover{color: #fff; background: var(--color-pt);}

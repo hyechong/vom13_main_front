@@ -51,7 +51,7 @@ setTimeout(() => {
       document.body.style.overflow = 'auto';
     }
   });
-}, 300);
+}, 500);
 
 /* -------- Best Items Slide -------- */
 const isSwiper = document.querySelectorAll('.swiper-wrapper');

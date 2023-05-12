@@ -29,11 +29,11 @@
         <div class="form-wrapper">
           <!-- <h3>회원가입</h3> -->
           <form onsubmit="return false;" id="signupForm">
-            <p><input type="text" placeholder="아이디"></p>
-            <p><input type="text" placeholder="이름"></p>
-            <p><input type="email" placeholder="이메일"></p>
-            <p><input type="password" placeholder="비밀번호"></p>
-            <p><input type="password" placeholder="비밀번호 확인"></p>
+            <p><input type="text" placeholder="아이디" class="id" name="user_id"></p>
+            <p><input type="text" placeholder="이름" class="name" name="user_name"></p>
+            <p><input type="email" placeholder="이메일" class="email" name="user_email"></p>
+            <p><input type="password" placeholder="비밀번호" class="pwd" name="user_pwd"></p>
+            <p><input type="password" placeholder="비밀번호 확인" class="rpwd" name="user_rpwd"></p>
             <p><input type="submit" value="회원가입 하기"></p>
             <p class="sign-msg">
               <em>이미 회원이신가요?</em>
@@ -55,5 +55,6 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script src="/baexang_front/js/etc/head-contents.js"></script>  
+  <script src="/baexang_front/js/request/register/signup.js"></script>  
 </body>
 </html>

@@ -148,9 +148,13 @@ $(function () {
   });
 
   /* -------- Loader Effect -------- */
-  $('.js-preloader').preloadinator({
-    minTime: 1000,
-    animation: 'fadeOut',
-    animationDuration: 400,
-  });
+  const isPreloader = $('.preloader');
+  if (isPreloader.length > 0) {
+    // if(isPreloader !== null){}로 해도 동일한 효과
+    $('.js-preloader').preloadinator({
+      minTime: 1000,
+      animation: 'fadeOut',
+      animationDuration: 400,
+    });
+  }
 });

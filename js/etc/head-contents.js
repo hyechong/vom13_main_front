@@ -29,10 +29,11 @@ for (let i = 0; i < cssFileNames.length; i++) {
 
 /* ------ Custom JS Files ----- */
 
-const include = document.createElement('script');
-include.type = 'text/javascript';
-include.src = `/baexang_front/js/etc/include.js?_v=${versionUpdate}`;
-document.body.insertAdjacentElement('beforeend', include);
+const isLoginElmt = document.createElement('script');
+isLoginElmt.type = 'text/javascript';
+isLoginElmt.async = true;
+isLoginElmt.src = `/baexang_front/js/request/register/isLogin.js?_v=${versionUpdate}`;
+document.body.insertAdjacentElement('beforeend', isLoginElmt);
 
 const jsFileNames = ['customjq', 'customjs'];
 

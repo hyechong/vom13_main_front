@@ -1,27 +1,18 @@
-const scriptFiles = [
-  '/baexang_front/js/etc/endPoints.js',
-  '/baexang_front/js/etc/requestMethods.js',
-];
+window.addEventListener('load', function () {
+  startSignup();
+});
 
-// 외부파일 읽어들이는 함수
-function getScripts(scripts, callback) {
-  var progress = 0;
-  scripts.forEach(function (script) {
-    $.getScript(script, function () {
-      if (++progress == scripts.length) callback();
-    });
-  });
-}
-
-const signup = document.querySelector('input[type="submit"]');
-const nameInput = document.querySelector('.name');
-const idInput = document.querySelector('.id');
-const emailInput = document.querySelector('.email');
-const pwdInput = document.querySelector('.pwd');
-const rpwdInput = document.querySelector('.rpwd');
-let check = false;
-getScripts(scriptFiles, function () {
-  console.log(endPoints);
+function startSignup() {
+  // console.log(endPoints);
+  const signup = document.querySelector('input[type="submit"]');
+  const nameInput = document.querySelector('.name');
+  const idInput = document.querySelector('.id');
+  const emailInput = document.querySelector('.email');
+  const pwdInput = document.querySelector('.pwd');
+  const rpwdInput = document.querySelector('.rpwd');
+  let check = false;
+  // getScripts(scriptFiles, function () {
+  // console.log(endPoints);
   signup.addEventListener('click', () => {
     check = true;
     // 입력창 작성 체크
@@ -72,11 +63,11 @@ getScripts(scriptFiles, function () {
       const plainFormData = Object.fromEntries(formData.entries()); // 저장된 데이터를 일반 문자열로 변환
       const jsonData = JSON.stringify(plainFormData); // 변환된 데이터를 json형식으로 변환
 
-      postSignupDataAsJaon(url, jsonData);
+      postSignupDataAsJson(url, jsonData);
       // console.log(jsonData);
     });
 
-    async function postSignupDataAsJaon(url, jsonString) {
+    async function postSignupDataAsJson(url, jsonString) {
       const options = {
         method: 'POST',
         headers: {
@@ -120,4 +111,5 @@ getScripts(scriptFiles, function () {
       // return response.json();
     }
   });
-});
+}
+// });

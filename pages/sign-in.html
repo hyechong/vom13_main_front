@@ -29,8 +29,8 @@
         <div class="form-wrapper">
           <!-- <h3>회원가입</h3> -->
           <form onsubmit="return false;" id="signinForm">
-            <p><input type="text" placeholder="아이디"></p>
-            <p><input type="password" placeholder="비밀번호"></p>
+            <p><input type="text" placeholder="아이디" name="user_id" class="id"></p>
+            <p><input type="password" placeholder="비밀번호" name="user_pwd" class="pwd"></p>
             <p><input type="submit" value="로그인 하기"></p>
             <p class="sign-msg">
               <em>아직 회원이 아니신가요?</em>
@@ -52,5 +52,6 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script src="/baexang_front/js/etc/head-contents.js"></script>  
+  <script src="/baexang_front/js/request/register/signin.js"></script>
 </body>
 </html>

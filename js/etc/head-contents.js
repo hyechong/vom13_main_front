@@ -5,7 +5,7 @@ let pageName = '';
 
 if (pageURL.includes('index')) {
   pageName = 'main';
-} else if (pageURL.includes('sign')) {
+} else if (pageURL.includes('sign') || pageURL.includes('admin')) {
   pageName = 'sign';
 }
 

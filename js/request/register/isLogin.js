@@ -45,15 +45,52 @@ const checkPostIsLogin = async (url, jsonString) => {
 
   try {
     const data = await postRequest(url, options);
-    console.log(data);
+    // console.log(data);
+    changeHeaderByLogin(data);
     startLogout();
   } catch (error) {
     console.log('error : ', error);
   }
 };
 
+const changeHeaderByLogin = (userLoginData) => {
+  console.log(userLoginData);
+  const infoWrappers = document.querySelectorAll('div.info');
+  // console.log(infoWrappers);
+  infoWrappers.forEach((info) => {
+    let userLoginElmt = '';
+    if (userLoginData.userid === 'guest') {
+      userLoginElmt = `
+      <ul>
+        <li><a href="#">장바구니<em>0</em></a></li>
+        <li class="login-menu"><a href="/baexang_front/pages/sign-in.html">로그인</a></li>
+        <li class="signup-menu"><a href="/baexang_front/pages/sign-up.html">회원가입</a></li>
+      </ul>
+      `;
+    } else {
+      if (userLoginData.userlvl === 1) {
+        userLoginElmt = `
+        <ul>
+          <li><a href="#">장바구니<em>0</em></a></li>
+          <li><a href="/baexang_front/pages/admin.html">관리자</a></li>
+          <li class="login-menu logged-in"><a href="#"><span>${userLoginData.userid}님 </span>로그아웃</a></li>
+        </ul>
+        `;
+      } else {
+        userLoginElmt = `
+        <ul>
+          <li><a href="#">장바구니<em>0</em></a></li>
+          <li class="login-menu logged-in"><a href="#"><span>${userLoginData.userid}님 </span>로그아웃</a></li>
+        </ul>
+        `;
+      }
+    }
+    info.insertAdjacentHTML('beforeend', userLoginElmt); // 자바스크립트로 직접 만든 태그는 insertAdjacentElement를 사용하지만 문자열로 만들어진 태그는 insertAdjacentHTML을 사용한다.
+  });
+};
+
 const startLogout = () => {
-  const logoutBtns = document.querySelectorAll('.logout');
+  const logoutBtns = document.querySelectorAll('.logged-in');
   // console.log(endPoints);
   const logoutUrl = endPoints.register.signout;
 

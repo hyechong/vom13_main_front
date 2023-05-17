@@ -154,3 +154,38 @@ dgLetters.forEach((letter, i) => {
 AOS.init({
   duration: 1200,
 });
+
+// 브라우저가 컨텐츠 내용 보다 크면 요소를 화면 위아래로 맞춤
+function fitBrowerHeight(el1, el2) {
+  const windowHeight = $(el1).outerHeight();
+  const wrapperHeight = $(el2).outerHeight();
+
+  if (windowHeight > wrapperHeight) {
+    //786 < 1023
+    $(el2).css({
+      display: 'flex',
+      'flex-direction': 'column',
+      'justify-content': 'space-between',
+      height: '100vh',
+    });
+  } else {
+    $(el2).css({
+      display: 'block',
+      height: 'auto',
+    });
+  }
+}
+
+setTimeout(() => {
+  fitBrowerHeight(window, '.wrapper');
+}, 300);
+
+const delay = 200;
+let timer = null;
+$(window).on('resize', function () {
+  clearTimeout(timer);
+  timer = setTimeout(function () {
+    fitBrowerHeight(window, '.wrapper');
+    document.location.reload();
+  }, delay);
+});

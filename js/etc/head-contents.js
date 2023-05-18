@@ -5,8 +5,10 @@ let pageName = '';
 
 if (pageURL.includes('index')) {
   pageName = 'main';
-} else if (pageURL.includes('sign') || pageURL.includes('admin')) {
+} else if (pageURL.includes('sign')) {
   pageName = 'sign';
+} else if (pageURL.includes('admin')) {
+  pageName = 'admin';
 }
 
 /* ------ Custom CSS Files ----- */

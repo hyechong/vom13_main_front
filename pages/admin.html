@@ -13,14 +13,81 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <div class="wrapper sign">
+  <div class="wrapper admin">
     <!-- Header -->
     <div id="header-wrapper"></div>
     <!-- Mobile Menu Section -->
     <div id="mobile-overlay-wrapper"></div>
 
-    <section>
-      <h2>관리자 페이지</h2>
+    <section class="admin-section section">
+      <div class="container">
+        <div class="title-wrapper" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
+          <p class="title-desc">관리자 페이지 입니다.</p>
+          <h2 class="section-title">ADMIN</h2>
+        </div>
+
+        <div class="admin-wrapper">
+          <div class="admin-btns">
+            <button type="button" class="on">회원관리</button>
+            <button type="button">상품관리</button>
+          </div>
+          <div class="admin-panels">
+            <div class="admin-panel on">
+
+              <div class="admin-user-table">
+                <ul class="admin-user-lists">
+
+                  <li class="list-title">
+                    <span class="num">번호</span>
+                    <span class="id">아이디</span>
+                    <span class="name">이름</span>
+                    <span class="lvl">등급</span>
+                    <span class="update">수정</span>
+                    <span class="delete">삭제</span>
+                  </li>
+
+                  <li class="list-contents">
+                    <form onsubmit="return false;">
+                      <span class="num">번호</span>
+                      <span class="id">아이디</span>
+                      <span class="name"><input type="text" value="이름"></span>
+                      <span class="lvl"><input type="text" value="등급"></span>
+                      <span class="update"><input type="submit" value="수정"></span>
+                      <span class="delete"><input type="submit" value="삭제"></span>
+                    </form>
+                  </li>
+
+                  <li class="list-contents">
+                    <form onsubmit="return false;">
+                      <span class="num">번호</span>
+                      <span class="id">아이디</span>
+                      <span class="name"><input type="text" value="이름"></span>
+                      <span class="lvl"><input type="text" value="등급"></span>
+                      <span class="update"><input type="submit" value="수정"></span>
+                      <span class="delete"><input type="submit" value="삭제"></span>
+                    </form>
+                  </li>
+
+                  <li class="list-contents">
+                    <form onsubmit="return false;">
+                      <span class="num">번호</span>
+                      <span class="id">아이디</span>
+                      <span class="name"><input type="text" value="이름"></span>
+                      <span class="lvl"><input type="text" value="등급"></span>
+                      <span class="update"><input type="submit" value="수정"></span>
+                      <span class="delete"><input type="submit" value="삭제"></span>
+                    </form>
+                  </li>
+
+                </ul>
+              </div>
+
+            </div>
+            <div class="admin-panel"></div>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <!-- Footer Section -->

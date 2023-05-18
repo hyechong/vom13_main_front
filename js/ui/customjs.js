@@ -51,7 +51,7 @@ setTimeout(() => {
       document.body.style.overflow = 'auto';
     }
   });
-}, 500);
+}, 2000);
 
 /* -------- Best Items Slide -------- */
 const isSwiper = document.querySelectorAll('.swiper-wrapper');
@@ -84,31 +84,6 @@ if (isSwiper.length > 0) {
     },
   });
 
-  /* -------- Pick Art Section -------- */
-
-  // 1. 요소 선택
-  const btns = document.querySelectorAll('.pick-tab-btn');
-  const panels = document.querySelectorAll('.pick-tab-panel');
-
-  // 2. 함수 정의
-  function activeTabs(i) {
-    btns.forEach((btn) => {
-      btn.classList.remove('on');
-    });
-    panels.forEach((panel) => {
-      panel.classList.remove('on');
-    });
-    btns[i].classList.add('on');
-    panels[i].classList.add('on');
-  }
-
-  // 3. 함수 호출
-  btns.forEach((btn, idx) => {
-    btn.addEventListener('click', () => {
-      activeTabs(idx);
-    });
-  });
-
   /* -------- New Art Slide -------- */
   const newArtSwiper = new Swiper('.new-art-slider-wrapper .swiper', {
     slidesPerView: 3,
@@ -137,6 +112,41 @@ if (isSwiper.length > 0) {
     },
   });
 }
+
+/* -------- Pick Art Section -------- */
+
+// 1. 요소 선택
+// pick panel 요소
+const btns = document.querySelectorAll('.pick-tab-btn');
+const panels = document.querySelectorAll('.pick-tab-panel');
+
+// admin panel 요소
+const adminBtns = document.querySelectorAll('.admin-btns button');
+const adminPanels = document.querySelectorAll('.admin-panel');
+
+// 2. 함수 정의
+
+function commonTabs(bts, pns) {
+  function activeTabs(i) {
+    bts.forEach((btn) => {
+      btn.classList.remove('on');
+    });
+    pns.forEach((panel) => {
+      panel.classList.remove('on');
+    });
+    bts[i].classList.add('on');
+    pns[i].classList.add('on');
+  }
+  // 3. 함수 호출
+  bts.forEach((btn, idx) => {
+    btn.addEventListener('click', () => {
+      activeTabs(idx);
+    });
+  });
+}
+
+commonTabs(btns, panels);
+commonTabs(adminBtns, adminPanels);
 
 // Direct Gallery Text Effect
 const dgLetters = document.querySelectorAll('.direct-gallery-inside h2 span');
@@ -176,16 +186,19 @@ function fitBrowerHeight(el1, el2) {
   }
 }
 
-setTimeout(() => {
-  fitBrowerHeight(window, '.wrapper');
-}, 300);
+fitBrowerHeight(window, '.wrapper');
 
-const delay = 200;
-let timer = null;
-$(window).on('resize', function () {
-  clearTimeout(timer);
-  timer = setTimeout(function () {
-    fitBrowerHeight(window, '.wrapper');
-    document.location.reload();
-  }, delay);
-});
+// 모바일 버전 감지 후 PC 버전에서만 실행 시킴 (계획)
+// setTimeout(() => {
+//   fitBrowerHeight(window, '.wrapper');
+// }, 300);
+
+// const delay = 200;
+// let timer = null;
+// $(window).on('resize', function () {
+//   clearTimeout(timer);
+//   timer = setTimeout(function () {
+//     fitBrowerHeight(window, '.wrapper');
+//     document.location.reload();
+//   }, delay);
+// });

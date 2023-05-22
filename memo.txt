@@ -1,1 +1,16 @@
 /baexang_front/
+
+mvc모델 (model controller view) : 백엔드 프론트엔드 분리 
+
+$k_arr = ['가', '나', '다', '라'];
+      $arr = ['a', 'b', 'c', 'd'];
+      // for($i = 0; $i < count($arr); $i++){
+      //   echo $arr[$i];
+      // }
+
+      foreach($k_arr as $k){
+        foreach($arr as $i){
+        echo $k;
+        echo $i;
+        }
+      }

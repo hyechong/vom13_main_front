@@ -8,7 +8,9 @@ var endPoints = {
     isSignin: `https://${domain}/baexang_back/register/is_signin`,
     checkAcsCode: `https://${domain}/baexang_back/register/check_admin_signin`,
   },
-  admin: {},
+  admin: {
+    getUsers: `https://${domain}/baexang_back/admin/get_users`,
+  },
   productPictures: {},
   productDrawings: {},
 };

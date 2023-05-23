@@ -22,5 +22,6 @@
 .admin .admin-user-lists li form{display: grid; grid-template-columns: 1fr 2fr 2fr 2fr 1fr 1fr; font-size: .875rem; text-align: center; align-items: center;}
 .admin .admin-user-lists li span{padding: .5rem 0;}
 .admin .admin-user-lists li span input{border: 1px solid var(--color-pt); text-align: center; padding: .5rem; width: 90%;}
-.admin .admin-user-lists li span input[type="submit"]{text-align: center; width: 70%; padding: .25rem; background: var(--color-pt); color: #fff;}
+.admin .admin-user-lists li span input[type="submit"],
+.admin .admin-user-lists li span input[type="button"]{text-align: center; width: 70%; padding: .25rem; background: var(--color-pt); color: #fff;}
 .admin .admin-user-lists li.list-null{padding: .5rem 0; width: 100%; text-align: center; font-size: .875rem;}

@@ -64,7 +64,6 @@ function startSignup() {
       const jsonData = JSON.stringify(plainFormData); // 변환된 데이터를 json형식으로 변환
 
       postSignupDataAsJson(url, jsonData);
-      // console.log(jsonData);
     });
 
     async function postSignupDataAsJson(url, jsonString) {

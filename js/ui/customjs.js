@@ -202,3 +202,15 @@ fitBrowerHeight(window, '.wrapper');
 //     document.location.reload();
 //   }, delay);
 // });
+
+// -------- 이미지 미리보기 -------- //
+const imageFile = document.querySelector('#f_img');
+imageFile.addEventListener('change', (e) => {
+  const reader = new FileReader();
+  reader.readAsDataURL(e.target.files[0]);
+  reader.onload = function (e) {
+    const imagePreview = document.querySelector('#preview-img');
+    imagePreview.setAttribute('src', e.target.result);
+  };
+  fitBrowerHeight(window, '.wrapper');
+});

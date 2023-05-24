@@ -18,6 +18,16 @@ async function putRequest(url, options) {
   });
 }
 
+/* ====== Common Delete Request Function ====== */
+async function deleteRequest(url, options) {
+  return await fetch(url, options).then((response) => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  });
+}
+
 /* ====== Common GET Request Function ====== */
 async function getRequest(url) {
   return await fetch(url).then((response) => {

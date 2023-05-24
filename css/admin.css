@@ -25,3 +25,28 @@
 .admin .admin-user-lists li span input[type="submit"],
 .admin .admin-user-lists li span input[type="button"]{text-align: center; width: 70%; padding: .25rem; background: var(--color-pt); color: #fff;}
 .admin .admin-user-lists li.list-null{padding: .5rem 0; width: 100%; text-align: center; font-size: .875rem;}
+
+/* 상품관리 스타일 */
+.admin .admin-insert-wrapper{width:100%; height:auto;}
+.admin .admin-short-txt{width:100%; height:auto; display:grid; grid-template-columns: 1fr 2fr 2fr 2fr 2fr; column-gap: .5rem; border-bottom:1px solid var(--color-pt); padding-bottom:.5rem;}
+.admin .admin-short-txt > div:not(.tb-select){border:1px solid var(--color-pt); width:100%; display:grid; grid-template-columns: 1.5fr 3fr; align-items: center;}
+.admin .admin-short-txt .tb-select select{width:100%; padding:.5rem; border:1px solid var(--color-pt); border-radius: 0; text-align: center; outline:0; height:100%; color:#999;}
+.admin .admin-short-txt > div > label{background:var(--color-pt); color:#fff; font-family: var(--ff-kr-sans); font-size:0.875rem; text-align: center; padding:.5rem 0;}
+.admin .admin-short-txt > div > input{padding:0 .5rem;}
+
+.admin .admin-img-desc{width:100%; height:auto; padding:.5rem 0; display:flex; column-gap: .5rem; border-bottom:1px solid var(--color-pt);}
+.admin .admin-img-desc > div{width:50%;}
+.admin .admin-desc, .admin .admin-img{display:flex; flex-direction: column; row-gap:.5rem;}
+.admin .admin-desc label{width:100%; height:auto; text-align: center; font-family:var(--ff-kr-sans); font-size:0.875rem; background:var(--color-pt); color:#fff; padding:.5rem 0;}
+.admin .admin-desc textarea{width:100%; height:100%; border:1px solid var(--color-pt); resize:none; padding:.5rem;}
+.admin .admin-img .img-info{display:grid; grid-template-columns: 1fr 2fr; border:1px solid var(--color-pt); align-items: center;}
+.admin .admin-img .img-info label{text-align: center; font-family:var(--ff-kr-sans); font-size:0.875rem; background:var(--color-pt); color:#fff; padding:.5rem 0;}
+.admin .admin-img .img-info input{padding:0 .5rem;}
+.admin .img-preview{width:100%; height:auto; object-fit: cover; border:1px solid var(--color-pt); padding:.5rem; overflow:hidden;}
+.admin .img-preview img{width:100%;}
+
+
+.admin .submit-btn{width:100%; height:auto;}
+.admin .submit-btn input{width:100%; height:auto; padding:.5rem 0; background:var(--color-pt); color:#fff; text-align:center;}
+
+

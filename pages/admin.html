@@ -28,11 +28,11 @@
 
         <div class="admin-wrapper">
           <div class="admin-btns">
-            <button type="button" class="on">회원관리</button>
-            <button type="button">상품관리</button>
+            <button type="button">회원관리</button>
+            <button type="button" class="on">상품관리</button>
           </div>
           <div class="admin-panels">
-            <div class="admin-panel on">
+            <div class="admin-panel">
 
               <div class="admin-user-table">
                 <ul class="admin-user-lists">
@@ -50,7 +50,52 @@
               </div>
 
             </div>
-            <div class="admin-panel"></div>
+            <div class="admin-panel on">
+
+              <form class="admin-insert-wrapper">
+                <div class="admin-short-txt">
+                  <div class="tb-select">
+                    <select name="">
+                      <option value="">사진작품</option>
+                      <option value="">그림작품</option>
+                    </select>
+                  </div>
+                  <div class="title">
+                    <label for="title">작품명</label>
+                    <input type="text" id="title" placeholder="작품명">
+                  </div>
+                  <div class="wt_en">
+                    <label for="wt_en">영문 작가명</label>
+                    <input type="text" id="wt_en" placeholder="영문 작가명">
+                  </div>
+                  <div class="wt_kr">
+                    <label for="wt_kr">한글 작가명</label>
+                    <input type="text" id="wt_kr" placeholder="한글 작가명">
+                  </div>
+                  <div class="price">
+                    <label for="price">가격</label>
+                    <input type="text" id="price" placeholder="가격">
+                  </div>
+                </div>
+                <div class="admin-img-desc">
+                  <div class="admin-desc">
+                    <label for="desc">  작품설명</label>
+                    <textarea name="" id="desc" placeholder="작품 설명을 입력해 주세요."></textarea>
+                  </div>
+                  <div class="admin-img">
+                    <div class="img-info">
+                      <label for="f_img">작품사진</label>
+                      <input type="file" id="f_img">
+                    </div>
+                    <div class="img-preview">
+                      <img id="preview-img">
+                    </div>
+                  </div>
+                </div>
+                <div class="submit-btn"></div>
+              </form>
+
+            </div>
           </div>
         </div>
 

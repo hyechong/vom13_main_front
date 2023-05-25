@@ -13,6 +13,7 @@ var endPoints = {
     updateUser: `https://${domain}/baexang_back/admin/update_user`,
     deleteUser: `https://${domain}/baexang_back/admin/delete_user`,
   },
-  productPictures: {},
-  productDrawings: {},
+  product: {
+    insertProduct: `https://${domain}/baexang_back/product/insert_product`,
+  },
 };

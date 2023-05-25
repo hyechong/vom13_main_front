@@ -1,4 +1,5 @@
-const versionUpdate = new Date().getTime();
+// const versionUpdate = new Date().getTime();
+const versionUpdate = '20230525';
 
 const pageURL = document.location.href;
 let pageName = '';

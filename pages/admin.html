@@ -55,44 +55,46 @@
               <form class="admin-insert-wrapper">
                 <div class="admin-short-txt">
                   <div class="tb-select">
-                    <select name="">
-                      <option value="">사진작품</option>
-                      <option value="">그림작품</option>
+                    <select name="pr_type">
+                      <option value="picture">사진작품</option>
+                      <option value="drawing">그림작품</option>
                     </select>
                   </div>
                   <div class="title">
                     <label for="title">작품명</label>
-                    <input type="text" id="title" placeholder="작품명">
+                    <input type="text" id="title" placeholder="작품명" name="pr_ttl">
                   </div>
                   <div class="wt_en">
                     <label for="wt_en">영문 작가명</label>
-                    <input type="text" id="wt_en" placeholder="영문 작가명">
+                    <input type="text" id="wt_en" placeholder="영문 작가명" name="pr_wt_en">
                   </div>
                   <div class="wt_kr">
                     <label for="wt_kr">한글 작가명</label>
-                    <input type="text" id="wt_kr" placeholder="한글 작가명">
+                    <input type="text" id="wt_kr" placeholder="한글 작가명" name="pr_wt_kr">
                   </div>
                   <div class="price">
                     <label for="price">가격</label>
-                    <input type="text" id="price" placeholder="가격">
+                    <input type="text" id="price" placeholder="가격" name="pr_pri">
                   </div>
                 </div>
                 <div class="admin-img-desc">
                   <div class="admin-desc">
                     <label for="desc">  작품설명</label>
-                    <textarea name="" id="desc" placeholder="작품 설명을 입력해 주세요."></textarea>
+                    <textarea name="pr_desc" id="desc" placeholder="작품 설명을 입력해 주세요."></textarea>
                   </div>
                   <div class="admin-img">
                     <div class="img-info">
                       <label for="f_img">작품사진</label>
-                      <input type="file" id="f_img">
+                      <input type="file" id="f_img" name="pr_img">
                     </div>
                     <div class="img-preview">
                       <img id="preview-img">
                     </div>
                   </div>
                 </div>
-                <div class="submit-btn"></div>
+                <div class="submit-btn">
+                  <input type="submit" value="입력하기">
+                </div>
               </form>
 
             </div>
@@ -114,5 +116,6 @@
   <script src="/baexang_front/js/etc/head-contents.js"></script>  
   <script src="/baexang_front/js/request/register/checkAdminSignin.js"></script>
   <script src="/baexang_front/js/request/admin/controlUsers.js"></script>
+  <script src="/baexang_front/js/request/product/insertProduct.js"></script>
 </body>
 </html>

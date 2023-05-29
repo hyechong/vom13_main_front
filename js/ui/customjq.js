@@ -115,17 +115,19 @@ $(function () {
   }); // tab 버튼 click할때 실행
 
   /* -------- Fitting New Art Image Ratio -------- */
-  function fit1ImageRatio(el1, elv1) {
-    const fitElmtWidth = $(el1).width();
-    $(el1).height(fitElmtWidth * elv1);
-  }
+  setTimeout(() => {
+    function fit1ImageRatio(el1, elv1) {
+      const fitElmtWidth = $(el1).width();
+      $(el1).height(fitElmtWidth * elv1);
+    }
 
-  // const newArtWidth = $('.new-art-image').width();
-  // $('.new-art-image').height(newArtWidth * 1.4);
-  fit1ImageRatio('.new-art-image', 1.4);
-  $(window).on('resize', function () {
+    // const newArtWidth = $('.new-art-image').width();
+    // $('.new-art-image').height(newArtWidth * 1.4);
     fit1ImageRatio('.new-art-image', 1.4);
-  });
+    $(window).on('resize', function () {
+      fit1ImageRatio('.new-art-image', 1.4);
+    });
+  }, 2000);
 
   /* -------- Fitting Review Image Ratio -------- */
   fit1ImageRatio('.review-image', 0.8);

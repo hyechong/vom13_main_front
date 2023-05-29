@@ -40,8 +40,8 @@
 .best-art .swiper-slide .view-more-box{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-30%) rotateY(180deg); background: rgba(255,255,255,.8); width: 80%; height: 80%; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all .4s; transition-delay: .1s;}
 .best-art .swiper-slide .best-image:hover .view-more-box{opacity: 1; visibility: visible; transform: translate(-50%,-50%) rotateY(0);}
 
-.swiper-pagination-bullet{background: #444;}
-.swiper-pagination-bullet-active{background: #333;}
+.best-swiper-pagination-bullet{background: #444;}
+.best-swiper-pagination-bullet-active{background: #333;}
 
 .best-art .best-info{width: 100%; height: auto; padding: var(--el-medium) 0; display: flex; flex-direction: column;}
 .best-art .best-info .item-title{font-family: var(--ff-kr-serif); font-size: 1.5rem; font-weight: 600; line-height: 1.875rem; }

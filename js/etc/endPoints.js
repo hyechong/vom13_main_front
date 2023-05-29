@@ -15,5 +15,6 @@ var endPoints = {
   },
   product: {
     insertProduct: `https://${domain}/baexang_back/product/insert_product`,
+    getProducts: `https://${domain}/baexang_back/product/get_products`,
   },
 };

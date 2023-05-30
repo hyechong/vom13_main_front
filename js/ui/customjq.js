@@ -127,13 +127,13 @@ $(function () {
     $(window).on('resize', function () {
       fit1ImageRatio('.new-art-image', 1.4);
     });
-  }, 2000);
 
-  /* -------- Fitting Review Image Ratio -------- */
-  fit1ImageRatio('.review-image', 0.8);
-  $(window).on('resize', function () {
+    /* -------- Fitting Review Image Ratio -------- */
     fit1ImageRatio('.review-image', 0.8);
-  });
+    $(window).on('resize', function () {
+      fit1ImageRatio('.review-image', 0.8);
+    });
+  }, 2000);
 
   /* -------- To Top Button -------- */
   $(window).on('scroll', function () {

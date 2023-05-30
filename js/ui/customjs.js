@@ -112,9 +112,13 @@ setTimeout(() => {
       },
     });
   }
+  // Aos Plugin Initiate
+  AOS.init({
+    duration: 1200,
+  });
 }, 2000);
 
-/* -------- Pick Art Section -------- */
+/* -------- MD Pick Art Section -------- */
 
 // 1. 요소 선택
 // pick panel 요소
@@ -159,11 +163,6 @@ dgLetters.forEach((letter, i) => {
   } else {
     letter.style.animationDelay = `${delayIndex / 10}s`;
   }
-});
-
-// Aos Plugin Initiate
-AOS.init({
-  duration: 1200,
 });
 
 // 브라우저가 컨텐츠 내용 보다 크면 요소를 화면 위아래로 맞춤

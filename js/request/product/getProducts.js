@@ -29,7 +29,8 @@ async function getMainProduct(sortBy, selector, limit) {
             }
             ${
               sortBy === 'best'
-                ? `<div class='view-more-box'>
+                ? `
+                <div class='view-more-box'>
                   <div class='more-btn'>
                     <a href='#'>
                       <svg height='45' width='160'>
@@ -38,7 +39,8 @@ async function getMainProduct(sortBy, selector, limit) {
                       <span>View More</span>
                     </a>
                   </div>
-                </div>`
+                </div>
+                `
                 : ''
             }
           </div>
@@ -59,7 +61,8 @@ async function getMainProduct(sortBy, selector, limit) {
           }
           ${
             sortBy == 'best'
-              ? `<div class='best-info'>
+              ? `
+              <div class='best-info'>
                 <h2 class='item-title'>${artInfo.pr_ttl}</h2>
                 <p class='item-by'>${artInfo.pr_wt_kr}</p>
                 <em class='item-size'>30.0cm x 30.0cm</em>
@@ -67,7 +70,8 @@ async function getMainProduct(sortBy, selector, limit) {
                   ${Number(artInfo.pr_pri).toLocaleString()}
                   <span>원</span>
                 </strong>
-              </div>`
+              </div>
+              `
               : ''
           }
         </div>

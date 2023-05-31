@@ -4,11 +4,13 @@ $(function () {
     const headerHeight = $('header').outerHeight();
     $('.landing').css('padding-top', `${headerHeight}px`);
     $('.sign-form').css('padding-top', `${headerHeight}px`);
+    $('.best .best-section').css('padding-top', `${headerHeight}px`);
   }, 300);
   $(window).on('resize', function () {
     const headerHeight = $('header').outerHeight();
     $('.landing').css('padding-top', `${headerHeight}px`);
     $('.sign-form').css('padding-top', `${headerHeight}px`);
+    $('.best .best-section').css('padding-top', `${headerHeight}px`);
   });
 
   /* Main Landing Slider */
@@ -114,8 +116,8 @@ $(function () {
     );
   }); // tab 버튼 click할때 실행
 
-  /* -------- Fitting New Art Image Ratio -------- */
   setTimeout(() => {
+    /* -------- Fitting New Art Image Ratio -------- */
     function fit1ImageRatio(el1, elv1) {
       const fitElmtWidth = $(el1).width();
       $(el1).height(fitElmtWidth * elv1);
@@ -132,6 +134,12 @@ $(function () {
     fit1ImageRatio('.review-image', 0.8);
     $(window).on('resize', function () {
       fit1ImageRatio('.review-image', 0.8);
+    });
+
+    /* -------- Fitting Best Page Image Ratio -------- */
+    fit1ImageRatio('.best .best-image img', 1);
+    $(window).on('resize', function () {
+      fit1ImageRatio('.best .best-image img', 1);
     });
   }, 2000);
 

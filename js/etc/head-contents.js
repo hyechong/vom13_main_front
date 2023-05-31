@@ -10,6 +10,8 @@ if (pageURL.includes('index')) {
   pageName = 'sign';
 } else if (pageURL.includes('admin')) {
   pageName = 'admin';
+} else if (pageURL.includes('best') || pageURL.includes('new')) {
+  pageName = 'sub-page';
 }
 
 /* ------ Custom CSS Files ----- */

@@ -186,7 +186,9 @@ function fitBrowerHeight(el1, el2) {
   }
 }
 
-fitBrowerHeight(window, '.wrapper');
+setTimeout(() => {
+  fitBrowerHeight(window, '.wrapper');
+}, 2000);
 
 // 모바일 버전 감지 후 PC 버전에서만 실행 시킴 (계획)
 // setTimeout(() => {

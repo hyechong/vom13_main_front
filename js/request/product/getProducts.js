@@ -32,7 +32,7 @@ async function getMainProduct(sortBy, selector, limit) {
                 ? `
                 <div class='view-more-box'>
                   <div class='more-btn'>
-                    <a href='#'>
+                    <a href="/baexang_front/pages/detail.html?pid=${artInfo.pr_ID}">
                       <svg height='45' width='160'>
                         <rect height='45' width='160' />
                       </svg>
@@ -49,7 +49,7 @@ async function getMainProduct(sortBy, selector, limit) {
               ? `<div class='new-art-text'>
                 <em>${artInfo.pr_desc}</em>
                 <div class='more-btn'>
-                  <a href='#'>
+                  <a href="/baexang_front/pages/detail.html?pid=${artInfo.pr_ID}">
                     <svg height='45' width='160'>
                       <rect height='45' width='160' />
                     </svg>

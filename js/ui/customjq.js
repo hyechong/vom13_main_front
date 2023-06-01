@@ -4,13 +4,13 @@ $(function () {
     const headerHeight = $('header').outerHeight();
     $('.landing').css('padding-top', `${headerHeight}px`);
     $('.sign-form').css('padding-top', `${headerHeight}px`);
-    $('.best .best-section').css('padding-top', `${headerHeight}px`);
+    $('.product .product-section').css('padding-top', `${headerHeight}px`);
   }, 300);
   $(window).on('resize', function () {
     const headerHeight = $('header').outerHeight();
     $('.landing').css('padding-top', `${headerHeight}px`);
     $('.sign-form').css('padding-top', `${headerHeight}px`);
-    $('.best .best-section').css('padding-top', `${headerHeight}px`);
+    $('.product .product-section').css('padding-top', `${headerHeight}px`);
   });
 
   /* Main Landing Slider */
@@ -136,10 +136,10 @@ $(function () {
       fit1ImageRatio('.review-image', 0.8);
     });
 
-    /* -------- Fitting Best Page Image Ratio -------- */
-    fit1ImageRatio('.best .best-image img', 1);
+    /* -------- Fitting Product Page Image Ratio -------- */
+    fit1ImageRatio('.product .product-image img', 1);
     $(window).on('resize', function () {
-      fit1ImageRatio('.best .best-image img', 1);
+      fit1ImageRatio('.product .product-image img', 1);
     });
   }, 2000);
 

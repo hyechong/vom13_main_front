@@ -111,8 +111,37 @@ setTimeout(() => {
         },
       },
     });
+    /* -------- Product Page Slide -------- */
+    const productSwiper = new Swiper('.product .swiper', {
+      slidesPerView: 1,
+      // spaceBetween: 20,
+      // navigation: {
+      //   nextEl: '.swiper-button-next',
+      //   prevEl: '.swiper-button-prev',
+      // },
+      // pagination: {
+      //   el: '.new-swiper-pagination',
+      //   clickable: true,
+      // },
+      // breakpoints: {
+      //   480: {
+      //     // 480 이하
+      //     slidesPerView: 1, // 보이는 슬라이드 갯수
+      //     slidesPerGroup: 1, // 하나의 페이지네이션에 묶이는 슬라이드 갯수
+      //     spaceBetween: 0,
+      //   },
+      //   786: {
+      //     // 786 이하
+      //     slidesPerView: 2,
+      //     slidesPerGroup: 2,
+      //     spaceBetween: 10,
+      //   },
+      // },
+    });
   }
-  // Aos Plugin Initiate
+
+  /* -------- Aos Plugin Initiate -------- */
+
   AOS.init({
     duration: 1200,
   });

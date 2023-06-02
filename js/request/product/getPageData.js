@@ -11,35 +11,42 @@ function jsUcfirst(string) {
 
 let titleStr = '';
 let sortKey = '';
-if (pageString === 'best') {
-  sortKey = `sort=${pageString}&`;
-  titleStr = 'best';
-} else if (pageString === 'new') {
-  sortKey = `sort=${pageString}&`;
-  titleStr = 'new';
-} else {
-  sortKey = '';
-}
+let cateKey = 'cate=all';
+let subTit = '';
 
-let cateKey = '';
-if (pageString === 'pp') {
+if (pageString === 'best' || pageString === 'new') {
+  sortKey = `sort=${pageString}&`;
+  titleStr = pageString;
+  subTit =
+    pageString === 'best'
+      ? '백상의 인기 작품을 만나보세요.'
+      : '백상의 최신 작품을 만나보세요.';
+} else if (pageString === 'pp' || pageString === 'dp') {
   cateKey = `cate=${pageString}`;
-  titleStr = 'picture';
-} else if (pageString === 'dp') {
-  cateKey = `cate=${pageString}`;
-  titleStr = 'drawing';
-} else {
-  cateKey = 'cate=all';
+  titleStr = pageString === 'pp' ? 'picture' : 'drawing';
+  subTit =
+    pageString === 'pp'
+      ? '백상의 사진 작품을 만나보세요.'
+      : '백상의 그림 작품을 만나보세요.';
 }
 
 const subPageTit = document.querySelector('.product .section-title');
 const listTit = document.querySelector('.product-list-wrapper h3');
+const subDesc = document.querySelector('.product .title-desc');
+subDesc.textContent = subTit;
 subPageTit.textContent = titleStr.toUpperCase() + ' ART';
 listTit.textContent = jsUcfirst(titleStr) + ' Art';
 
 async function getSubPageData() {
   const getPageUrl = endPoints.product.getProducts + '?' + sortKey + cateKey;
-
+  // let getPageUrl = '';
+  // const lastChr = checkUrl.charAt(checkUrl.length - 1); // 마지막 문자열 읽기
+  // if (lastChr === '&') {
+  //   getPageUrl = checkUrl.slice(0, -1); // 마지막 문자열 자르기
+  // } else {
+  //   getPageUrl = checkUrl;
+  // }
+  // console.log(getPageUrl);
   try {
     const data = await getRequest(getPageUrl);
     const productLists = document.querySelector('.product-lists');

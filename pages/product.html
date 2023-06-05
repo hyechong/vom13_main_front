@@ -9,6 +9,9 @@
   <link rel="shortcut icon" href="/baexang_front/images/icon/favicon.ico">
   <title>백상 || 작품</title>
 
+  <!-- Remix Icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
   <!-- Plugin CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -33,18 +36,19 @@
             <h3>MD PICK</h3>
           </div>
           <div class="swiper-contents">
-            <div class="swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="https://ckgpwl2.cafe24.com/baexang_front/images/bx_pp/7IKw7KeA6riw7J2Y7KeR_phpw0gHVe_1684981633.png" alt="">
-                </div>
-                <div class="swiper-slide">
-                  <img src="https://ckgpwl2.cafe24.com/baexang_front/images/bx_pp/7IKw7KeA6riw7J2Y7KeR_phpw0gHVe_1684981633.png" alt="">
-                </div>
-                <div class="swiper-slide">
-                  <img src="https://ckgpwl2.cafe24.com/baexang_front/images/bx_pp/7IKw7KeA6riw7J2Y7KeR_phpw0gHVe_1684981633.png" alt="">
+            <div class="swiper-image-wrapper">         
+              <div class="swiper">
+                <div class="swiper-wrapper">
                 </div>
               </div>
+            </div>
+
+            <div class="swiper-text-wrapper">
+              <span class="preview-swiper">
+                <span class="btn btn-prev"><i class="ri-arrow-left-s-line"></i></span>
+                <span class="num"></span>
+                <span class="btn btn-next"><i class="ri-arrow-right-s-line"></i></span>
+              </span>
             </div>
           </div>
         </div>
@@ -77,5 +81,6 @@
   <script src="/baexang_front/js/request/register/signin.js"></script>
 
   <script src="/baexang_front/js/request/product/getPageData.js"></script>
+  <script src="/baexang_front/js/request/product/getPickSlider.js"></script>
 </body>
 </html>

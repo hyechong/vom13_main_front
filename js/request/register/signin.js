@@ -3,7 +3,7 @@ window.addEventListener('load', function () {
 });
 
 const startSignin = () => {
-  console.log(endPoints);
+  // console.log(endPoints);
   const signin = document.querySelector('input[type="submit"]');
   const idInput = document.querySelector('.id');
   const pwdInput = document.querySelector('.pwd');

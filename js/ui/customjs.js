@@ -112,13 +112,32 @@ setTimeout(() => {
       },
     });
     /* -------- Product Page Slide -------- */
+    const contentsNumber = $('.swiper-contents .text-contents');
+    const slideCount = $('.swiper-contents .swiper-slide').length;
+    console.log(slideCount);
+    const num = $('.swiper-text-wrapper .num');
     const productSwiper = new Swiper('.product .swiper', {
       slidesPerView: 1,
-      // spaceBetween: 20,
-      // navigation: {
-      //   nextEl: '.swiper-button-next',
-      //   prevEl: '.swiper-button-prev',
-      // },
+      loop: true,
+      on: {
+        init: function () {
+          $('.swiper-text-wrapper .text-contents:first-of-type').addClass(
+            'active'
+          );
+
+          num.text($(this)[0].activeIndex + '/' + slideCount);
+        },
+        slideChange: () => {
+          contentsNumber.removeClass('active');
+          contentsNumber.eq(productSwiper.realIndex).addClass('active');
+          num.text(productSwiper.realIndex + 1 + ' / ' + slideCount);
+        },
+      },
+      // spaceBetween: 10,
+      navigation: {
+        nextEl: '.preview-swiper .btn-next',
+        prevEl: '.preview-swiper .btn-prev',
+      },
       // pagination: {
       //   el: '.new-swiper-pagination',
       //   clickable: true,

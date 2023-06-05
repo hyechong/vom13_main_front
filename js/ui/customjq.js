@@ -141,6 +141,12 @@ $(function () {
     $(window).on('resize', function () {
       fit1ImageRatio('.product .product-image img', 1);
     });
+
+    /* -------- Fitting Product MD Slider Image Ratio -------- */
+    fit1ImageRatio('.product .swiper', 0.8);
+    $(window).on('resize', function () {
+      fit1ImageRatio('.product .swiper', 0.8);
+    });
   }, 2000);
 
   /* -------- To Top Button -------- */

@@ -43,3 +43,5 @@
 .product .more-lists{width: 100%; height: auto; margin-top: 3rem; display: flex; justify-content: center;}
 .product .more-lists button{background: var(--color-pt); color: #fff; font-size: 1rem; border: 1px solid var(--color-pt); padding: .875rem 3rem; transition: all .4s;}
 .product .more-lists button:hover{background: #fff; color: var(--color-pt);}
+
+.product .preview-swiper .num{color: #666;}

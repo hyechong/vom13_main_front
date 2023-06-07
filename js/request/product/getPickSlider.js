@@ -22,7 +22,7 @@ async function getPickData() {
     data.forEach((pickData) => {
       pickImgList = `
         <div class="swiper-slide">
-          <a href='#'>
+          <a href='/baexang_front/pages/detail.html?pid=${pickData.pr_ID}&cate=${pickData.pr_type}'>
             <img src="${pickData.pr_img}" alt="">
           </a>
         </div>

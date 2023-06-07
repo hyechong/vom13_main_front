@@ -59,7 +59,9 @@ async function getSubPageData() {
             <img src="${productInfo.pr_img}" alt="">
             <div class='view-more-box'>
               <div class='more-btn'>
-                <a href='#'>
+                <a href='/baexang_front/pages/detail.html?pid=${
+                  productInfo.pr_ID
+                }&cate=${productInfo.pr_type}'>
                   <svg height='45' width='160'>
                     <rect height='45' width='160' />
                   </svg>

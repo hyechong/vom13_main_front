@@ -1,0 +1,40 @@
+.detail .gallery-contents{z-index:10; position:relative; display:grid; grid-template-columns: 4.5fr 4.5fr 1fr;}
+.detail .gallery-contents .gallery-item-hang{padding:3rem 2rem;}
+.detail .gallery-contents .image-frame{box-shadow:2px 5px 8px #888; overflow:hidden;}
+.detail .gallery-contents .gallery-item-hang img{width:100%;}
+.detail .gallery-bg-wrapper{width:100%; height:1000px; position:relative; padding:3rem;}
+.detail .gallery-bg{width:100%; height:100%; left:0; top:0; position:absolute; background-size:cover; background-position:center center; transition:all .4s;}
+
+.detail .line{width:100%; height:1px; background:#eee; margin:1.2rem 0; display:block;}
+
+.detail .item-order-info,
+.detail .item-order-info-clone{background:#fff; padding:2.5rem; margin-bottom:15rem;}
+.detail .item-order-info-clone{display:none;}
+.detail .item-order-info .item-title-box,
+.detail .item-order-info-clone .item-title-box{position:relative;}
+.detail .item-order-info .item-title-box h3,
+.detail .item-order-info-clone .item-title-box h3{font-size:1.625rem; line-height:2.25rem; font-family:var(--ff-kr-serif);}
+.detail .item-order-info .item-title-box p,
+.detail .item-order-info-clone .item-title-box p{font-size:1rem; color:var(--color-pt); line-height:1.25rem; margin-top:1.2rem;}
+
+
+.detail .item-size-box{padding:1.2rem 0;}
+.detail .size-title{display:flex; justify-content: space-between; align-items: center;}
+.detail .size-title p{font-size:1.125rem; font-weight:500; line-height: 1.75rem; color:#333;}
+.detail .size-title em{font-size:0.875rem; font-weight:400; color:#888;}
+.detail .item-size-box select{width:100%; height:auto; padding:1rem; border:1px solid #ddd; border-radius:0; outline:0; font-size:1rem; color:#888; margin-top:1rem;}
+
+
+.detail .item-count-box{background:#f8f8f8; padding:1.2rem; display:flex; justify-content: space-between; align-items: center;}
+.detail .item-count-box .counting{background:#fff; display:flex; border:1px solid #ddd;}
+.detail .item-count-box .counting span{width:50px; height:30px; display:flex; align-items: center; justify-content: center; color:#666; font-size:.9rem}
+
+
+.detail .item-price-box{display:flex; justify-content: space-between;}
+.detail .item-price-box strong{font-weight:500; font-size:1.25rem;}
+.detail .item-btns{display:flex; justify-content: flex-end; column-gap: .5rem; margin-top:1.2rem;}
+
+
+.detail .item-thumb-image{padding:0 .75rem; display:flex; flex-direction: column; row-gap:.75rem;}
+.detail .item-thumb-image span.active{border:2px solid var(--color-pt);}
+.detail .item-thumb-image img{width:100%;}

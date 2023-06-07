@@ -11,10 +11,10 @@ if (pageURL.includes('index')) {
 } else if (pageURL.includes('admin')) {
   pageName = 'admin';
 } else if (
-  pageURL.includes('best') ||
-  pageURL.includes('new') ||
-  pageURL.includes('pp') ||
-  pageURL.includes('dp')
+  // pageURL.includes('best') ||
+  // pageURL.includes('new') ||
+  // pageURL.includes('pp') ||
+  pageURL.includes('product')
 ) {
   pageName = 'sub-page';
 } else if (pageURL.includes('detail')) {

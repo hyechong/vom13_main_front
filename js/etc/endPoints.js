@@ -17,4 +17,8 @@ var endPoints = {
     insertProduct: `https://${domain}/baexang_back/product/insert_product`,
     getProducts: `https://${domain}/baexang_back/product/get_products`,
   },
+  cart: {
+    addCart: `https://${domain}/baexang_back/cart/add_cart`,
+    getCart: `https://${domain}/baexang_back/cart/get_cart`,
+  },
 };

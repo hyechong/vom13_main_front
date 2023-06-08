@@ -17,6 +17,8 @@ const cartForm = document.querySelector('.cart-form');
 const itemCountElmt = document.querySelectorAll('.counting span');
 const itemCountNum = document.querySelectorAll('.counting .count');
 const itemCount = document.querySelector('.counting .count').textContent;
+const itemSize1 = document.querySelector('#cart-size-1');
+const itemSize2 = document.querySelector('#cart-size-2');
 
 async function getDetailData() {
   const getDetailUrl =
@@ -32,8 +34,21 @@ async function getDetailData() {
       <input type="hidden" name="cart_wt_kr" value="${data[0].pr_wt_kr}">
       <input type="hidden" name="cart_pri" value="${data[0].pr_pri}" class="cart_pri">
       <input type="hidden" name="cart_count" value="1" class="cart_count">
+      <input type="hidden" name="cart_size" value="30">
+      <input type="hidden" name="cart_type" value="${data[0].pr_type}">
     `;
     cartForm.insertAdjacentHTML('beforeend', cartFormElmt);
+
+    function handleSizeChange(event) {
+      const selectedValue = event.target.value;
+      // console.log(selectedValue);
+      itemSize1.value = selectedValue;
+      itemSize2.value = selectedValue;
+      document.querySelector('input[name="cart_size"]').value = selectedValue;
+    }
+
+    itemSize1.addEventListener('change', handleSizeChange);
+    itemSize2.addEventListener('change', handleSizeChange);
 
     itemImage.setAttribute('src', data[0].pr_img);
     itemTitle.textContent = data[0].pr_ttl;
@@ -63,9 +78,10 @@ async function getDetailData() {
         });
 
         itemPrice.forEach((price) => {
-          price.textContent = inputPriceElmt.value = `${Number(
+          price.textContent = `${Number(
             count * data[0].pr_pri
           ).toLocaleString()}원`;
+          inputPriceElmt.value = count * data[0].pr_pri;
         });
       });
     });

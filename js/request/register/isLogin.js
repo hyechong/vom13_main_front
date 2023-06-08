@@ -62,7 +62,7 @@ const changeHeaderByLogin = (userLoginData) => {
     if (userLoginData.userid === 'guest') {
       userLoginElmt = `
       <ul>
-        <li><a href="#">장바구니<em>0</em></a></li>
+        <li><a href="/baexang_front/pages/cart.html">장바구니<em>[${userLoginData.cartcount}]</em></a></li>
         <li class="login-menu"><a href="/baexang_front/pages/sign-in.html">로그인</a></li>
         <li class="signup-menu"><a href="/baexang_front/pages/sign-up.html">회원가입</a></li>
       </ul>
@@ -71,7 +71,7 @@ const changeHeaderByLogin = (userLoginData) => {
       if (userLoginData.userlvl === 1) {
         userLoginElmt = `
         <ul>
-          <li><a href="#">장바구니<em>0</em></a></li>
+          <li><a href="/baexang_front/pages/cart.html">장바구니<em>[${userLoginData.cartcount}]</em></a></li>
           <li><a href="/baexang_front/pages/admin.html">관리자</a></li>
           <li class="login-menu logged-in"><a href="#"><span>${userLoginData.userid}님 </span>로그아웃</a></li>
         </ul>
@@ -79,7 +79,7 @@ const changeHeaderByLogin = (userLoginData) => {
       } else {
         userLoginElmt = `
         <ul>
-          <li><a href="#">장바구니<em>0</em></a></li>
+          <li><a href="/baexang_front/pages/cart.html">장바구니<em>[${userLoginData.cartcount}]</em></a></li>
           <li class="login-menu logged-in"><a href="#"><span>${userLoginData.userid}님 </span>로그아웃</a></li>
         </ul>
         `;

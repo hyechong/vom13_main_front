@@ -1,3 +1,5 @@
+/* best, new, 사진작품, 그림작품, cart 페이지 */
+
 /* product page style */
 .product .product-section .container{padding-top: var(--el-main);}
 .product .product-list-wrapper{width: 100%; height: auto; margin: 5rem auto 0;}
@@ -45,3 +47,10 @@
 .product .more-lists button:hover{background: #fff; color: var(--color-pt);}
 
 .product .preview-swiper .num{color: #666;}
+
+/* cart page style */
+.product.cart .price-count{display: flex; align-items: center; justify-content: space-between;}
+.product.cart .cart-btns{width: 100%; display: flex; justify-content: space-between; column-gap: .5rem; padding: var(--el-small) 0;}
+.product.cart .cart-btns button{width: 50%; text-align: center; padding: .5rem 0; background: var(--color-pt); color: #fff; border: 1px solid var(--color-pt); transition: all .4s;}
+.product.cart .cart-btns button:hover{color: var(--color-pt); background: #fff;}
+.product.cart .product-info{padding-bottom: 0;}

@@ -114,11 +114,22 @@
   .detail .gallery-bg-wrapper{height:auto; min-height:500px;}
   .detail .gallery-contents{height:500px; justify-content: space-between;}
   .detail .gallery-contents .gellery-item-hang{width: 70%;}
+
+  .detail .detail-info-text .info-title{flex-direction: column; padding:1.5rem 0; row-gap:.75rem;}
+  .detail .detail-info-text .info-title .tit{padding:0;}
 }
 
-@media screen and (max-width:650px){
+@media screen and (max-width:680px){
   /* Detail Page Style */
   .detail .gallery-contents .gallery-item-hang{width: 85%;}
+}
+
+@media screen and (max-width:586px){
+  /* Cart Page Style */
+  .title-wrapper .section-title{padding: 0 2rem; text-align: center;}
+  .product .product-content{display: flex; flex-direction: column; justify-content: space-between;}
+  .product.cart .cart-btns{flex-direction: column; row-gap: .5rem;}
+  .product.cart .cart-btns button{width: 100%;}
 }
 
 @media screen and (max-width:480px){
@@ -193,6 +204,10 @@
   .detail .item-thumb-image span{width:60px;}
 
   .detail .size-title{flex-direction: column; align-items: flex-start;}
+
+  .detail .detail-info-section .detail-info-image,
+  .detail .detail-info-section .detail-info-text{width:90%;}
+  .detail .detail-info-text .info-title .wt .kr{padding-left:.75rem; margin-left:.75rem;}
 }
 
 @media screen and (max-width:380px){

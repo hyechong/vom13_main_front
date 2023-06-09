@@ -150,10 +150,16 @@ $(function () {
       fit1ImageRatio('.product .swiper', 0.8);
     });
 
-    /* -------- Detail Page Image Ratio -------- */
+    /* -------- Detail Page Hang Image Ratio -------- */
     fit1ImageRatio('.detail .image-frame', 0.7);
     $(window).on('resize', function () {
       fit1ImageRatio('.detail .image-frame', 0.7);
+    });
+
+    /* -------- Detail Page Info Image Ratio -------- */
+    fit1ImageRatio('.detail .detail-info-image', 0.7);
+    $(window).on('resize', function () {
+      fit1ImageRatio('.detail .detail-info-image', 0.7);
     });
   }, 2000);
 

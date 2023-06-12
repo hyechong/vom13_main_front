@@ -77,9 +77,11 @@
 .detail .review-form .rating input{display: none;}
 .detail .review-form .rating label i{font-size: 1.25rem; color: var(--color-pt);}
 .detail .review-form .rating label i.ri-star-fill{display: none;}
+.detail .review-form .rating label:hover ~ label i.ri-star-fill,
 .detail .review-form .rating label:hover i.ri-star-fill,
 .detail .review-form .rating input:checked ~ label i.ri-star-fill{display: inline-block;}
 
+.detail .review-form .rating label:hover ~ label i.ri-star-line,
 .detail .review-form .rating label:hover i.ri-star-line,
 .detail .review-form .rating input:checked ~ label i.ri-star-line{display: none;}
 
@@ -88,3 +90,15 @@
 .detail .review-lists{width: 100%; height: auto; margin-top: .75rem; border: 1px solid #bbb; padding: .25rem;}
 .detail .review-list{width: 100%; height: auto; border: 1px solid #bbb; margin-bottom: .5rem;}
 .detail .review-list .review-list-info{width: 100%; height: auto; padding: .5rem 0; display: flex; justify-content: space-between; padding: .5rem .75rem; color: #333; background: #f8f8f8; align-items: flex-end;}
+
+.detail .review-list .review-list-info .id-reg{display:flex; color:#333; font-size:1rem; align-items: center;}
+.detail .review-list .review-list-info .id-reg span{margin-left:1.25rem; padding-left:1.25rem; position:relative;}
+.detail .review-list .review-list-info .id-reg span:before{content:''; position:absolute; width:1px; height:40%; left:0; top:50%; transform:translateY(-50%); background:#aaa;}
+.detail .review-list .review-list-info button{background:var(--color-pt); color:#fff; padding:.5rem 1rem;}
+
+.detail .review-list .review-list-content{padding:.75rem; border-top:1px solid #ddd;}
+.detail .review-list .review-list-content p{color:#333; font-size:1rem;}
+
+
+
+

@@ -152,38 +152,23 @@
     <section class="detail-info-section section">
       <div class="container">
         <div class="title-wrapper">
-          <p class="title-desc">클로드 모네</p>
-          <h2 class="section-title">양산을 든 여인</h2>
+          <p class="title-desc"></p>
+          <h2 class="section-title"></h2>
         </div>
 
         <div class="detail-info-image">
-          <img src="https://ckgpwl2.cafe24.com/baexang_front/images/bx_pp/7Jes7J24_phposqt8t_1684981698.png" alt="">
+          <img src="" alt="">
         </div>
 
         <div class="detail-info-text">
           <div class="info-title">
-            <span class="tit">양산을 든 여인</span>
+            <span class="tit"></span>
             <span class="wt">
-              <span class="en">Claude Monet</span>
-              <span class="kr">클로드 모네</span>
+              <span class="en"></span>
+              <span class="kr"></span>
             </span>
           </div>
           <div class="info-desc">
-            <p>
-              마네의 도움으로 1871년 모네는 아르장퇴유에 거처를 마련하였다. 양산을 든 여인(1875)는 1875년 여름에서 1876년 사이에 그린 일련의 작품 시리즈 가운데 하나이다. 이때 그린 시리즈물의 풍경은 파리 외곽인 아르장퇴유의 두 번째 집 주위의 정원을 묘사하고 있다.
-              <br><br>
-              이 그림의 모델은 모네의 아내 카미유와 그의 아들 장이다. 장은 당시 8살이었다. 그녀는 치마를 휘감는 바람 부는 언덕 위에 양산을 들고 서서 여름철의 정경을 소요하고 있다.
-              
-              그녀 옆에 있는 아들은 다소 뒤켠으로 물러나 있어 조금은 이들 관계를 소원하게 만들어 보이고 있다. 아래에서 올려다 보는 시각으로 그려져 있어 카미유의 존재가 한층 더 도드라져 보인다.
-              
-              언덕 아래로 그림자가 길게 드리워져 있는데, 햇빛을 가리는 양산과 인물의 그림자 각도가 서로 빗겨나 있는 것이 안정적인 구도를 만들고 있다.             
-              <br><br>
-              하지만 그림의 실제 주제는 색과 움직임이다. 색을 섞고 그늘을 만들고 붓질로 움직임을 만드는 방식을 통해 그는 이 풍경을 매우 현실적으로 만들었다.
-              
-              바람은 언덕 들꽃의 꽃대와 풀잎의 흔들거림 속으로 불어와 여인의 치마폭을 휘감아 올라가 베일과 머리카락을 흩날리고 양산을 한껏 팽팽히 부풀리고 있다.
-              
-              이같은 생생한 현실감으로 인해 관람자는 마치 그런 바람을 맞으며 야외에 함께 나와 있는 것 같은 개방감을 느끼게 된다. 
-            </p>
           </div>
         </div>
       </div>
@@ -219,38 +204,39 @@
 
         <div class="review-form">
           <form onsubmit="return false;">
-            <textarea placeholder="작품평을 입력해 주세요."></textarea>
+            <textarea placeholder="작품평을 입력해 주세요." class="cmt-cont" name="cmt_cont"></textarea>
             <div class="rating">
               <p>별점을 선택해 주세요</p>
-              <div class="stars">
-                <input type="radio" id="star-1" value="5">
+              <div class="stars"> 
+                <!-- radio는 name값 같으면 중복선택 막아줌 -->
+                <input type="radio" id="star-1" value="5" name="cmt_star" class="cmt-star">
                 <label for="star-1">
                   <i class="ri-star-line"></i>
                   <i class="ri-star-fill"></i>
                 </label>
-                <input type="radio" id="star-2" value="4">
+                <input type="radio" id="star-2" value="4" name="cmt_star" class="cmt-star">
                 <label for="star-2">
                   <i class="ri-star-line"></i>
                   <i class="ri-star-fill"></i>
                 </label>
-                <input type="radio" id="star-3" value="3">
+                <input type="radio" id="star-3" value="3" name="cmt_star" class="cmt-star">
                 <label for="star-3">
                   <i class="ri-star-line"></i>
                   <i class="ri-star-fill"></i>
                 </label>
-                <input type="radio" id="star-4" value="2">
+                <input type="radio" id="star-4" value="2" name="cmt_star" class="cmt-star">
                 <label for="star-4">
                   <i class="ri-star-line"></i>
                   <i class="ri-star-fill"></i>
                 </label>
-                <input type="radio" id="star-5" value="1">
+                <input type="radio" id="star-5" value="1" name="cmt_star" class="cmt-star">
                 <label for="star-5">
                   <i class="ri-star-line"></i>
                   <i class="ri-star-fill"></i>
                 </label>
               </div>
             </div>
-            <button type="button" class="cmt-insert">입력</button>
+            <button type="submit" class="cmt-insert">입력</button>
           </form>
 
           <div class="review-lists">
@@ -272,6 +258,53 @@
                   <button class="cmt-delete">삭제</button>
                 </span>
               </div>
+              <div class="review-list-content">
+                <p>첫 작품 평가입니다.</p>
+              </div>
+            </div>
+            <div class="review-list">
+              <div class="review-list-info">
+                <span class="id-reg">
+                  <strong>hyechong</strong>
+                  <span>2023-06-09</span>
+                  <span class="star-list">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                  </span>
+                </span>
+                <span class="btns">
+                  <button class="cmt-update">수정</button>
+                  <button class="cmt-delete">삭제</button>
+                </span>
+              </div>
+              <div class="review-list-content">
+                <p>첫 작품 평가입니다.</p>
+              </div>
+            </div>
+            <div class="review-list">
+              <div class="review-list-info">
+                <span class="id-reg">
+                  <strong>hyechong</strong>
+                  <span>2023-06-09</span>
+                  <span class="star-list">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                  </span>
+                </span>
+                <span class="btns">
+                  <button class="cmt-update">수정</button>
+                  <button class="cmt-delete">삭제</button>
+                </span>
+              </div>
+              <div class="review-list-content">
+                <p>첫 작품 평가입니다.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -292,5 +325,6 @@
 
   <script src="/baexang_front/js/request/product/getDetailData.js"></script>
   <script src="/baexang_front/js/request/cart/controlCart.js"></script>
+  <script src="/baexang_front/js/request/comment/insertCmt.js"></script>
 </body>
 </html>

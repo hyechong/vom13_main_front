@@ -117,6 +117,12 @@
 
   .detail .detail-info-text .info-title{flex-direction: column; padding:1.5rem 0; row-gap:.75rem;}
   .detail .detail-info-text .info-title .tit{padding:0;}
+
+  .detail .review-form form{flex-direction: column; row-gap:.25rem;}
+  .detail .review-form textarea{width:100%;}
+  .detail .review-form .rating{width:100%; padding:.75rem 0;}
+  .detail .review-form button.cmt-insert{width:100%;}
+
 }
 
 @media screen and (max-width:680px){
@@ -208,6 +214,17 @@
   .detail .detail-info-section .detail-info-image,
   .detail .detail-info-section .detail-info-text{width:90%;}
   .detail .detail-info-text .info-title .wt .kr{padding-left:.75rem; margin-left:.75rem;}
+
+  .detail .list-title{flex-direction: column; align-items: flex-start;}
+  .detail .review-list .reivew-list-info{flex-direction: column; align-items: flex-start; row-gap:.5rem;}
+  .detail .review-list .reivew-list-info .id-reg{font-size:.875rem; color:#888;}
+  .detail .review-list .reivew-list-info .id-reg span{margin-left:1rem; padding-left:.75rem;}
+  .detail .review-list .reivew-list-info span.btns{width:100%; display:flex; column-gap: .5rem;}
+  .detail .review-list .reivew-list-info span.btns button{width:50%;}
+  .detail .review-list .review-list-content p{font-size:.875rem; color:#888;}
+
+
+
 }
 
 @media screen and (max-width:380px){

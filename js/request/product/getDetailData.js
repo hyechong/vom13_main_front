@@ -50,6 +50,14 @@ async function getDetailData() {
     itemSize1.addEventListener('change', handleSizeChange);
     itemSize2.addEventListener('change', handleSizeChange);
 
+    const wrapTitle = document.querySelector('.detail .section-title');
+    const wrapWtKr = document.querySelector('.detail .title-desc');
+    const infoImage = document.querySelector('.detail-info-image img');
+    const infoTitle = document.querySelector('.info-title .tit');
+    const wtEn = document.querySelector('.info-title .en');
+    const wtKr = document.querySelector('.info-title .kr');
+    const infoDesc = document.querySelector('.info-desc');
+
     itemImage.setAttribute('src', data[0].pr_img);
     itemTitle.textContent = data[0].pr_ttl;
     itemArtist.textContent = data[0].pr_wt_kr;
@@ -57,6 +65,15 @@ async function getDetailData() {
     itemPrice.forEach((price) => {
       price.textContent = `${Number(data[0].pr_pri).toLocaleString()}원`;
     });
+
+    wrapTitle.textContent = data[0].pr_ttl;
+    wrapWtKr.textContent = data[0].pr_wt_kr;
+    infoImage.setAttribute('src', data[0].pr_img);
+    infoTitle.textContent = data[0].pr_ttl;
+    wtEn.textContent = data[0].pr_wt_en;
+    wtKr.textContent = data[0].pr_wt_kr;
+    // infoDesc.textContent = data[0].pr_desc;
+    infoDesc.insertAdjacentHTML('beforeend', data[0].pr_desc);
 
     const inputCountElmt = document.querySelector('.cart_count');
     const inputPriceElmt = document.querySelector('.cart_pri');

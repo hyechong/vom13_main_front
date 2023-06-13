@@ -65,7 +65,10 @@
 .detail .star-avg-val::before{position: absolute; content: ''; width: 2px; height: 30%; top: 50%; left: 0; transform: translateY(-50%); background: #bbb;}
 
 .detail .star-avg-box .ri-line{color: var(--color-pt);}
-.detail .star-avg-box .ri-fill{position: absolute; width: 55%; left: 1rem; white-space: nowrap; overflow: hidden; color: var(--color-pt);}
+.detail .star-avg-box .ri-fill{position: absolute; width: 55%; left: 1rem; white-space: nowrap; overflow: hidden; color: var(--color-pt); top: 0;}
+
+.detail .star-avg-box .ri-line,
+.detail .star-avg-box .ri-fill{display: flex; font-size: 1.2rem;}
 
 .detail .review-form{width: 100%; height: auto;}
 .detail .review-form form{display: flex; justify-content: space-between; border: 1px solid #bbb; margin-top: var(--el-medium); padding: .25rem; column-gap: .25rem;}
@@ -99,6 +102,9 @@
 .detail .review-list .review-list-content{padding:.75rem; border-top:1px solid #ddd;}
 .detail .review-list .review-list-content p{color:#333; font-size:1rem;}
 
+.star-list .ri-star-fill, 
+.star-list .ri-star-line{color: var(--color-pt);}
 
+.detail .no-elmt{display: flex; align-items: center; justify-content: center; padding: 1rem 0; color: #888; font-size: .875rem;}
 
 

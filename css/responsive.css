@@ -123,6 +123,8 @@
   .detail .review-form .rating{width:100%; padding:.75rem 0;}
   .detail .review-form button.cmt-insert{width:100%;}
 
+  .detail .update-form textarea{width: 100%;}
+  .detail .update-form button{width: 100%;}
 }
 
 @media screen and (max-width:680px){
@@ -216,15 +218,14 @@
   .detail .detail-info-text .info-title .wt .kr{padding-left:.75rem; margin-left:.75rem;}
 
   .detail .list-title{flex-direction: column; align-items: flex-start;}
-  .detail .review-list .reivew-list-info{flex-direction: column; align-items: flex-start; row-gap:.5rem;}
-  .detail .review-list .reivew-list-info .id-reg{font-size:.875rem; color:#888;}
-  .detail .review-list .reivew-list-info .id-reg span{margin-left:1rem; padding-left:.75rem;}
-  .detail .review-list .reivew-list-info span.btns{width:100%; display:flex; column-gap: .5rem;}
-  .detail .review-list .reivew-list-info span.btns button{width:50%;}
+  .detail .review-list .review-list-info{flex-direction: column; align-items: flex-start; row-gap:.5rem;}
+  .detail .review-list .review-list-info .id-reg{font-size:.875rem; color:#888;}
+  .detail .review-list .review-list-info .id-reg span{margin-left:1rem; padding-left:.75rem;}
+  .detail .review-list .review-list-info span.btns{width:100%; display:flex; column-gap: .5rem;}
+  .detail .review-list .review-list-info span.btns button{width:50%;}
   .detail .review-list .review-list-content p{font-size:.875rem; color:#888;}
 
-
-
+  .detail .review-list .review-list-info .id-reg span:nth-child(2){display:none;}
 }
 
 @media screen and (max-width:380px){

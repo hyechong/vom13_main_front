@@ -25,5 +25,7 @@ var endPoints = {
   comment: {
     insertCmt: `https://${domain}/baexang_back/comment/insert_cmt`,
     getCmt: `https://${domain}/baexang_back/comment/get_cmt`,
+    updateCmt: `https://${domain}/baexang_back/comment/update_cmt`,
+    deleteCmt: `https://${domain}/baexang_back/comment/delete_cmt`,
   },
 };

@@ -103,7 +103,7 @@ async function getDetailData() {
       });
     });
 
-    console.log(data[0]);
+    // console.log(data[0]);
   } catch (error) {
     console.error('Error : ', error);
   }

@@ -301,19 +301,20 @@
   </div> -->
 
   <script>
-    window.addEventListener('load', function(){
-      // console.log(domain);
-      if(urlPath===`https://${domain}/baexang_front/`){
-       location.href = `https://${domain}/baexang_front/index.html`
+    window.onload = (event) => {
+      let protocolName = '';
+      if(navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
+        protocolName = 'https';
+      } else {
+        protocolName = 'http';
       }
-    });
-    // const url = document.location.href;
-    // if(url==='https://ckgpwl2.cafe24.com/baexang_front/'){
-    //   location.href = 'https://ckgpwl2.cafe24.com/baexang_front/index.html'
-    // }
-    // // if(url==='http://localhost/baexang_front/'){
-    // //   location.href = 'http://localhost/baexang_front/index.html'
-    // // }
+  
+      if(urlPath===`${domain}/baexang_front/`){
+       location.href = `${protocolName}://${domain}/baexang_front/index.html`
+      } else if(urlPath===`${protocolName}://${domain}/baexang_front/`) {
+        location.href = `${protocolName}://${domain}/baexang_front/index.html`
+      }
+    };
   </script>
   
   <!-- JQuery CDN Link -->

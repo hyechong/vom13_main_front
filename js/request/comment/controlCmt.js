@@ -2,6 +2,33 @@ window.addEventListener('load', function () {
   getCmtLists();
 });
 
+// 2023-06-13 11:19:50
+
+function elapsedTime(date) {
+  const start = new Date(date);
+  const end = new Date();
+
+  const diff = (end - start) / 1000;
+
+  const times = [
+    { name: '년', milliSeconds: 60 * 60 * 24 * 365 },
+    { name: '개월', milliSeconds: 60 * 60 * 24 * 30 },
+    { name: '일', milliSeconds: 60 * 60 * 24 },
+    { name: '시간', milliSeconds: 60 * 60 },
+    { name: '분', milliSeconds: 60 },
+  ];
+
+  for (const value of times) {
+    const betweenTime = Math.floor(diff / value.milliSeconds);
+    if (betweenTime > 0) {
+      return `${betweenTime}${value.name} 전`;
+    }
+  }
+  return '방금 전';
+}
+
+console.log(elapsedTime('2023-06-13 11:19:50'));
+
 const getCmtLists = async () => {
   const getCmtUrl = endPoints.comment.getCmt + '?cmt_pr_ID=' + pidString;
 
@@ -38,7 +65,7 @@ const getCmtLists = async () => {
               <div class="review-list-info">
                 <span class="id-reg">
                   <strong>${list.user_id}</strong>
-                  <span>${list.bx_cmt_reg}</span>
+                  <span>${elapsedTime(list.bx_cmt_reg)}</span>
                   <span class="star-list">
 
                   </span>
@@ -55,7 +82,7 @@ const getCmtLists = async () => {
               <div class="review-list-info">
                 <span class="id-reg">
                   <strong>${list.user_id}</strong>
-                  <span>${list.bx_cmt_reg}</span>
+                  <span>${elapsedTime(list.bx_cmt_reg)}</span>
                   <span class="star-list">
 
                   </span>

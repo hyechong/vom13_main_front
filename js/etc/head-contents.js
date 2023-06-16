@@ -42,7 +42,7 @@ isLoginElmt.async = true;
 isLoginElmt.src = `/baexang_front/js/request/register/isLogin.js?_v=${versionUpdate}`;
 document.body.insertAdjacentElement('beforeend', isLoginElmt);
 
-const jsFileNames = ['customjq', 'customjs'];
+const jsFileNames = ['customjq', 'customjs', 'jquery.preloadinator.min'];
 
 for (let i = 0; i < jsFileNames.length; i++) {
   const jsFile = document.createElement('script');

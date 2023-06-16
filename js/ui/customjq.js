@@ -161,7 +161,7 @@ $(function () {
     $(window).on('resize', function () {
       fit1ImageRatio('.detail .detail-info-image', 0.7);
     });
-  }, 2000);
+  }, 1200);
 
   /* -------- To Top Button -------- */
   $(window).on('scroll', function () {
@@ -191,7 +191,7 @@ $(function () {
   if (isPreloader.length > 0) {
     // if(isPreloader !== null){}로 해도 동일한 효과
     $('.js-preloader').preloadinator({
-      minTime: 1000,
+      minTime: 1500,
       animation: 'fadeOut',
       animationDuration: 400,
     });

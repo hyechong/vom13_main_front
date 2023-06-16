@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1" />
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="/baexang_front/images/icon/favicon.ico">
@@ -14,6 +15,11 @@
 
   <!-- Plugin CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    .preloader{position:fixed; background:#fff; width:100%; height:100vh; left:0; top:0; z-index:9999; display:flex; align-items: center; justify-content: center;}
+  </style>
+    
 </head>
 <body>
   <div class="wrapper detail">
@@ -99,8 +105,8 @@
         </div>
         <div class="item-order-info-clone">
           <div class="item-title-box">
-            <h3>아를의 랑그루아 다리</h3>
-            <p>빈센트 반 고흐</p>
+            <h3></h3>
+            <p></p>
           </div>
           <span class="line"></span>
           <div class="item-size-box">
@@ -115,7 +121,7 @@
           </div>
           <span class="line"></span>
           <div class="item-count-box">
-            <p>아를의 랑그루아 다리</p>
+            <p></p>
             <span class="counting">
               <span class="down"><i class="ri-subtract-line"></i></span>
               <span class="count">1</span>
@@ -125,7 +131,7 @@
           <span class="line"></span>
           <div class="item-price-box">
             <em>총 금액 : </em>
-            <strong>36,500원</strong>
+            <strong></strong>
           </div>
           <div class="item-btns">
             <div class="more-btn add-to-cart">
@@ -313,6 +319,10 @@
 
     <!-- Footer Section -->
     <div id="footer-wrapper"></div>
+  </div>
+
+  <div class="preloader js-preloader">
+    <div class="loader"></div>
   </div>
 
   <!-- JQuery CDN Link -->

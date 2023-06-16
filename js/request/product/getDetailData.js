@@ -9,8 +9,8 @@ const cateInitStr = cateString.split('_')[1];
 
 // 태그 요소 변수 모음
 const itemImage = document.querySelector('.image-frame img');
-const itemTitle = document.querySelector('.item-title-box h3');
-const itemArtist = document.querySelector('.item-title-box p');
+const itemTitle = document.querySelectorAll('.item-title-box h3');
+const itemArtist = document.querySelectorAll('.item-title-box p');
 const itemCountTitle = document.querySelector('.item-count-box p');
 const itemPrice = document.querySelectorAll('.item-price-box strong');
 const cartForm = document.querySelector('.cart-form');
@@ -59,8 +59,12 @@ async function getDetailData() {
     const infoDesc = document.querySelector('.info-desc');
 
     itemImage.setAttribute('src', data[0].pr_img);
-    itemTitle.textContent = data[0].pr_ttl;
-    itemArtist.textContent = data[0].pr_wt_kr;
+    itemTitle.forEach((title) => {
+      title.textContent = data[0].pr_ttl;
+    });
+    itemArtist.forEach((artist) => {
+      artist.textContent = data[0].pr_wt_kr;
+    });
     itemCountTitle.textContent = data[0].pr_ttl;
     itemPrice.forEach((price) => {
       price.textContent = `${Number(data[0].pr_pri).toLocaleString()}원`;

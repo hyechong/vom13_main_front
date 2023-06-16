@@ -2,7 +2,7 @@ const urlPath = document.location.href;
 const domain = new URL(urlPath).hostname;
 
 const protocol = urlPath.split(':')[0];
-console.log(protocol);
+// console.log(protocol);
 var endPoints = {
   register: {
     signup: `${protocol}://${domain}/baexang_back/register/signup`,

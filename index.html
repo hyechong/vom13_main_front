@@ -329,5 +329,15 @@
   <script src="/baexang_front/js/etc/head-contents.js"></script>
   <script src="/baexang_front/js/request/product/getProducts.js"></script>
 
+  <script>
+    function Mobile(){
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      }
+      if (Mobile()){// 모바일일 경우
+      const glbg = document.querySelector('.direct-gallery .container');
+      glbg.style.backgroundAttachment = 'scroll';
+      } else {// 모바일 외
+    }
+  </script>
 </body>
 </html>
